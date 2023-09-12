@@ -164,7 +164,7 @@
             button4.Name = "button4";
             button4.Size = new System.Drawing.Size(143, 48);
             button4.TabIndex = 27;
-            button4.Text = "button4";
+            button4.Text = "Save";
             button4.UseVisualStyleBackColor = true;
             // 
             // button5
