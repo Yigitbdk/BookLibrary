@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Project.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Library_Project
 {
     public partial class Form3 : Form
     {
+        BookLibraryContext db = new BookLibraryContext();
+
         public Form3()
         {
             InitializeComponent();
@@ -41,7 +44,12 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBoxCustomers.Items.Add(textBoxCustomers.Text);
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

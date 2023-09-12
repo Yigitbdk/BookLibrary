@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Project.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Library_Project
 {
     public partial class Form4 : Form
     {
+        BookLibraryContext db = new BookLibraryContext();
+
         public Form4()
         {
             InitializeComponent();
+            dataGridView1.DataSource = db.Books.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +49,21 @@ namespace Library_Project
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
