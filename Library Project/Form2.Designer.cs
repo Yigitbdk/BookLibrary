@@ -155,7 +155,7 @@
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(135, 48);
             button2.TabIndex = 26;
-            button2.Text = "button2";
+            button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
             // 
             // button4
