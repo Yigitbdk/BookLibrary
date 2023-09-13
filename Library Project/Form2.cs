@@ -53,5 +53,9 @@ namespace Library_Project
 
         }
 
+        private void textBoxPageNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

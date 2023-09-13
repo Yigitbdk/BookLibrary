@@ -18,7 +18,7 @@ namespace Library_Project
         public Form4()
         {
             InitializeComponent();
-            dataGridView1.DataSource = db.Books.ToList();
+            dataGridView1.DataSource = db.Reservations.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +64,16 @@ namespace Library_Project
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

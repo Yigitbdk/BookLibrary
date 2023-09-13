@@ -18,6 +18,7 @@ namespace Library_Project
         public Form3()
         {
             InitializeComponent();
+            dataGridView1.DataSource = db.Customers.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
