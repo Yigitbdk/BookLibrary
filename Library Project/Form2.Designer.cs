@@ -62,7 +62,7 @@
             BOOKS.Location = new System.Drawing.Point(338, 23);
             BOOKS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             BOOKS.Name = "BOOKS";
-            BOOKS.Size = new System.Drawing.Size(249, 84);
+            BOOKS.Size = new System.Drawing.Size(246, 84);
             BOOKS.TabIndex = 3;
             BOOKS.Text = "BOOKS";
             BOOKS.Click += BOOKS_Click;
@@ -229,6 +229,7 @@
             button2.TabIndex = 26;
             button2.Text = "Delete The Book";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button4
             // 

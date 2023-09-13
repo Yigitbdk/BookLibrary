@@ -50,12 +50,36 @@ namespace Library_Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            var kitapEkle = new Book()
+            {
+                Name = textBoxName.Text,
+                Writer = textBoxWriter.Text,
+                Genre = textBoxGenre.Text,
+                PageNumber = textBoxPageNumber.Text,
+                Date = DateTime.Now,
+            };
+            db.Books.Add(kitapEkle);
 
+            // or
+            // context.Add<Student>(kitapEkle);
+
+            db.SaveChanges();
         }
 
         private void textBoxPageNumber_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var kitapSil = db.Books.First<Book>();
+            db.Books.Remove(kitapSil);
+
+            // or
+            // context.Remove<Student>(kitapSil);
+
+            db.SaveChanges();
         }
     }
 }
