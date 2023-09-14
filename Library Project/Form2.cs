@@ -50,31 +50,18 @@ namespace Library_Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var kitapEkle = new Book()
+            var addBook = new Book()
             {
                 Name = textBoxName.Text,
                 Writer = textBoxWriter.Text,
                 Genre = textBoxGenre.Text,
-                PageNumber = textBoxPageNumber.Text,
-                Date = DateTime.Now
+                PageNumber = numericUpDownPage.Value.ToString(),
+                RecordDate = DateTime.Now,
+                CreateDate = DateTime.Now
             };
-            db.Books.Add(kitapEkle);
+            db.Books.Add(addBook);
             db.SaveChanges();
             LoadDatagrid();
-            var kitapEkle = new Book()
-            {
-                Name = textBoxName.Text,
-                Writer = textBoxWriter.Text,
-                Genre = textBoxGenre.Text,
-                PageNumber = textBoxPageNumber.Text,
-                Date = DateTime.Now,
-            };
-            db.Books.Add(kitapEkle);
-
-            // or
-            // context.Add<Student>(kitapEkle);
-
-            db.SaveChanges();
         }
 
         private void textBoxPageNumber_TextChanged(object sender, EventArgs e)
@@ -86,10 +73,6 @@ namespace Library_Project
         {
             var kitapSil = db.Books.First<Book>();
             db.Books.Remove(kitapSil);
-
-            // or
-            // context.Remove<Student>(kitapSil);
-
             db.SaveChanges();
         }
         private void LoadDatagrid()
@@ -97,5 +80,14 @@ namespace Library_Project
             dataGridView1.DataSource = db.Books.ToList();
         }
 
+        private void textBoxId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxGenre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
