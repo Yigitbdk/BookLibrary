@@ -244,6 +244,7 @@
             button3.Text = "Add New Book";
             button3.UseMnemonic = false;
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // dataGridView1
             // 

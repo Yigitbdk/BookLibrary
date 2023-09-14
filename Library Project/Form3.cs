@@ -52,5 +52,21 @@ namespace Library_Project
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var musteriEkle = new Customer()
+            {
+                Name = textBoxName.Text,
+                Surname = textBoxSurname.Text,
+                Age = Convert.ToInt16(textBoxAge.Text),
+                Male = Convert.ToBoolean(textBoxMale.Text),
+                CreateDate = DateTime.Parse(textBoxDate.Text),
+                TelNr = textBoxPhoneNumber.Text,
+            };
+            db.Customers.Add(musteriEkle);
+
+            db.SaveChanges();
+        }
     }
 }

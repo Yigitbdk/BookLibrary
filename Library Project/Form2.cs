@@ -25,7 +25,7 @@ namespace Library_Project
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            LoadDatagrid();
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -50,12 +50,27 @@ namespace Library_Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            var kitapEkle = new Book()
+            {
+                Name = textBoxName.Text,
+                Writer = textBoxWriter.Text,
+                Genre = textBoxGenre.Text,
+                PageNumber = textBoxPageNumber.Text,
+                Date = DateTime.Now
+            };
+            db.Books.Add(kitapEkle);
+            db.SaveChanges();
+            LoadDatagrid();
         }
 
         private void textBoxPageNumber_TextChanged(object sender, EventArgs e)
         {
 
         }
+        private void LoadDatagrid()
+        {
+            dataGridView1.DataSource = db.Books.ToList();
+        }
+
     }
 }
