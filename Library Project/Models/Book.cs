@@ -15,7 +15,9 @@ public partial class Book
 
     public string PageNumber { get; set; }
 
-    public DateTime Date { get; set; }
+    public DateTime RecordDate { get; set; }
+
+    public DateTime CreateDate { get; set; }
 
     public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>();
 

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             BOOKS = new System.Windows.Forms.Label();
             button3 = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -46,8 +46,6 @@
             button4 = new System.Windows.Forms.Button();
             textBoxName = new System.Windows.Forms.TextBox();
             textBoxWriter = new System.Windows.Forms.TextBox();
-            textBoxGenre = new System.Windows.Forms.TextBox();
-            textBoxDate = new System.Windows.Forms.TextBox();
             numericUpDownPage = new System.Windows.Forms.NumericUpDown();
             comboBoxGenre = new System.Windows.Forms.ComboBox();
             dateTimePickerRecord = new System.Windows.Forms.DateTimePicker();
@@ -96,53 +94,54 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle11.NullValue = null;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle12.NullValue = null;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle7.NullValue = null;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             dataGridView1.GridColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridView1.Location = new System.Drawing.Point(21, 180);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new System.Drawing.Size(731, 327);
             dataGridView1.TabIndex = 12;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button1
             // 
@@ -163,55 +162,55 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label2.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label2.Location = new System.Drawing.Point(775, 219);
+            label2.Location = new System.Drawing.Point(782, 180);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(53, 22);
+            label2.Size = new System.Drawing.Size(69, 27);
             label2.TabIndex = 21;
             label2.Text = "Name";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label3.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label3.Location = new System.Drawing.Point(775, 270);
+            label3.Location = new System.Drawing.Point(782, 242);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(62, 22);
+            label3.Size = new System.Drawing.Size(79, 27);
             label3.TabIndex = 22;
             label3.Text = "Writer";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label4.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label4.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label4.Location = new System.Drawing.Point(775, 320);
+            label4.Location = new System.Drawing.Point(782, 304);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(54, 22);
+            label4.Size = new System.Drawing.Size(72, 27);
             label4.TabIndex = 23;
             label4.Text = "Genre";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label5.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label5.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label5.Location = new System.Drawing.Point(775, 370);
+            label5.Location = new System.Drawing.Point(782, 367);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(105, 22);
+            label5.Size = new System.Drawing.Size(138, 27);
             label5.TabIndex = 24;
             label5.Text = "PageNumber";
             // 
             // labelRecord
             // 
             labelRecord.AutoSize = true;
-            labelRecord.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelRecord.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             labelRecord.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            labelRecord.Location = new System.Drawing.Point(775, 421);
+            labelRecord.Location = new System.Drawing.Point(782, 429);
             labelRecord.Name = "labelRecord";
-            labelRecord.Size = new System.Drawing.Size(102, 22);
+            labelRecord.Size = new System.Drawing.Size(133, 27);
             labelRecord.TabIndex = 25;
             labelRecord.Text = "Record Date";
             // 
@@ -240,18 +239,18 @@
             button4.Name = "button4";
             button4.Size = new System.Drawing.Size(185, 48);
             button4.TabIndex = 27;
-            button4.Text = "Save to the Database";
+            button4.Text = "Update the Book";
             button4.UseVisualStyleBackColor = false;
             // 
             // textBoxName
             // 
             textBoxName.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxName.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            textBoxName.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             textBoxName.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxName.Location = new System.Drawing.Point(775, 244);
+            textBoxName.Location = new System.Drawing.Point(782, 210);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new System.Drawing.Size(144, 25);
+            textBoxName.Size = new System.Drawing.Size(144, 29);
             textBoxName.TabIndex = 30;
             textBoxName.TextChanged += textBoxId_TextChanged;
             // 
@@ -259,55 +258,33 @@
             // 
             textBoxWriter.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             textBoxWriter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxWriter.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            textBoxWriter.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             textBoxWriter.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxWriter.Location = new System.Drawing.Point(775, 295);
+            textBoxWriter.Location = new System.Drawing.Point(782, 272);
             textBoxWriter.Name = "textBoxWriter";
-            textBoxWriter.Size = new System.Drawing.Size(144, 25);
+            textBoxWriter.Size = new System.Drawing.Size(144, 29);
             textBoxWriter.TabIndex = 32;
-            // 
-            // textBoxGenre
-            // 
-            textBoxGenre.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxGenre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxGenre.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            textBoxGenre.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxGenre.Location = new System.Drawing.Point(775, 344);
-            textBoxGenre.Name = "textBoxGenre";
-            textBoxGenre.Size = new System.Drawing.Size(144, 25);
-            textBoxGenre.TabIndex = 34;
-            textBoxGenre.TextChanged += textBoxPageNumber_TextChanged;
-            // 
-            // textBoxDate
-            // 
-            textBoxDate.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxDate.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            textBoxDate.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxDate.Location = new System.Drawing.Point(775, 446);
-            textBoxDate.Name = "textBoxDate";
-            textBoxDate.Size = new System.Drawing.Size(144, 25);
-            textBoxDate.TabIndex = 35;
             // 
             // numericUpDownPage
             // 
             numericUpDownPage.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            numericUpDownPage.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            numericUpDownPage.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             numericUpDownPage.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            numericUpDownPage.Location = new System.Drawing.Point(775, 395);
+            numericUpDownPage.Location = new System.Drawing.Point(782, 397);
             numericUpDownPage.Name = "numericUpDownPage";
-            numericUpDownPage.Size = new System.Drawing.Size(109, 25);
+            numericUpDownPage.Size = new System.Drawing.Size(144, 29);
             numericUpDownPage.TabIndex = 36;
             // 
             // comboBoxGenre
             // 
             comboBoxGenre.BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            comboBoxGenre.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            comboBoxGenre.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             comboBoxGenre.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             comboBoxGenre.FormattingEnabled = true;
-            comboBoxGenre.Location = new System.Drawing.Point(942, 343);
+            comboBoxGenre.Items.AddRange(new object[] { "True Crime", "Biographies and Autobiographies", "Novel", "Poetry", "Action and Adventure", "Comic Book", "Manga", "Detective and Mystery", "Fantasy", "Historical Fiction", "Horror", "Romance", "Science Fiction", "Cookbooks", "Essays", "History" });
+            comboBoxGenre.Location = new System.Drawing.Point(782, 334);
             comboBoxGenre.Name = "comboBoxGenre";
-            comboBoxGenre.Size = new System.Drawing.Size(118, 26);
+            comboBoxGenre.Size = new System.Drawing.Size(144, 30);
             comboBoxGenre.TabIndex = 37;
             comboBoxGenre.SelectedIndexChanged += comboBoxGenre_SelectedIndexChanged;
             // 
@@ -318,10 +295,10 @@
             dateTimePickerRecord.CalendarTitleBackColor = System.Drawing.Color.FromArgb(30, 35, 40);
             dateTimePickerRecord.CalendarTitleForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             dateTimePickerRecord.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            dateTimePickerRecord.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dateTimePickerRecord.Location = new System.Drawing.Point(942, 450);
+            dateTimePickerRecord.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dateTimePickerRecord.Location = new System.Drawing.Point(782, 459);
             dateTimePickerRecord.Name = "dateTimePickerRecord";
-            dateTimePickerRecord.Size = new System.Drawing.Size(118, 25);
+            dateTimePickerRecord.Size = new System.Drawing.Size(144, 29);
             dateTimePickerRecord.TabIndex = 38;
             // 
             // textBox1
@@ -440,8 +417,6 @@
             Controls.Add(dateTimePickerRecord);
             Controls.Add(comboBoxGenre);
             Controls.Add(numericUpDownPage);
-            Controls.Add(textBoxDate);
-            Controls.Add(textBoxGenre);
             Controls.Add(textBoxWriter);
             Controls.Add(textBoxName);
             Controls.Add(button4);
@@ -481,8 +456,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxWriter;
-        private System.Windows.Forms.TextBox textBoxGenre;
-        private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.NumericUpDown numericUpDownPage;
         private System.Windows.Forms.ComboBox comboBoxGenre;
         private System.Windows.Forms.DateTimePicker dateTimePickerRecord;

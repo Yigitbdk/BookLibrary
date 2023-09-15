@@ -54,10 +54,10 @@ namespace Library_Project
             {
                 Name = textBoxName.Text,
                 Writer = textBoxWriter.Text,
-                Genre = textBoxGenre.Text,
+                Genre = comboBoxGenre.Text,
                 PageNumber = numericUpDownPage.Value.ToString(),
-                RecordDate = DateTime.Now,
-                CreateDate = DateTime.Now
+                RecordDate = DateTime.Parse(dateTimePickerRecord.Text),
+                CreateDate = DateTime.Now,
             };
             db.Books.Add(addBook);
             db.SaveChanges();
@@ -71,6 +71,7 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             var kitapSil = db.Books.First<Book>();
             db.Books.Remove(kitapSil);
             db.SaveChanges();
@@ -86,6 +87,11 @@ namespace Library_Project
         }
 
         private void comboBoxGenre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
