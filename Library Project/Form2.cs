@@ -16,16 +16,27 @@ namespace Library_Project
     public partial class Form2 : Form
     {
         BookLibraryContext db = new BookLibraryContext();
-
         public Form2()
         {
             InitializeComponent();
-            dataGridView1.DataSource = db.Books.ToList();
+            dataGridView1.DataSource = db.Books.ToList();           
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            LoadDatagrid();
+            AddCheckBoxColumnOnDataGridView();
+        }
+
+        private void AddCheckBoxColumnOnDataGridView()
+        {
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
+            {
+                HeaderText = "",
+                Width = 30,
+                Name = "checkBoxColumn"
+            };
+            dataGridView1.Columns.Insert(0, checkBoxColumn);
+            SetDefaultCellsValue();
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -62,6 +73,9 @@ namespace Library_Project
             db.Books.Add(addBook);
             db.SaveChanges();
             LoadDatagrid();
+            SetDefaultCellsValue();
+
+            MessageBox.Show("Added");
         }
 
         private void textBoxPageNumber_TextChanged(object sender, EventArgs e)
@@ -71,11 +85,31 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+                if (isSelected)
+                {               
+                    db.Books.Remove((Book)row.DataBoundItem);
+                }
+            }
 
-            var kitapSil = db.Books.First<Book>();
-            db.Books.Remove(kitapSil);
+            //db.Books.Remove(new Book() { Id = 10 });
             db.SaveChanges();
+            LoadDatagrid();
+            SetDefaultCellsValue();
+
+            MessageBox.Show("Deleted");
         }
+
+        private void SetDefaultCellsValue()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Cells[0].Value = false;
+            }
+        }
+
         private void LoadDatagrid()
         {
             dataGridView1.DataSource = db.Books.ToList();
