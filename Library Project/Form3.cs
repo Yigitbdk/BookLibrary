@@ -19,6 +19,11 @@ namespace Library_Project
         {
             InitializeComponent();
             dataGridView1.DataSource = db.Customers.ToList();
+            dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["FkBookId"].Visible = false;
+            dataGridView1.Columns["Reservations"].Visible = false;
+            //dataGridView1.Columns["FkBook"].Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
