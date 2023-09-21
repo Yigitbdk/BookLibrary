@@ -159,15 +159,19 @@ namespace Library_Project
                     filteredBooks = filteredBooks.Where(x => x.Writer.ToLower().Contains(searchValue2)).ToList();
 
                 }
-
+                               
                 if (!string.IsNullOrEmpty(searchValue3))
                 {
                     filteredBooks = filteredBooks.Where(x => x.Genre.ToLower().Contains(searchValue3)).ToList();
                 }
 
-                if (!string.IsNullOrEmpty(searchValue4))
+                if (string.IsNullOrEmpty(searchValue1) && string.IsNullOrEmpty(searchValue2) && string.IsNullOrEmpty(searchValue3))
                 {
-                    filteredBooks = filteredBooks.Where(x => x.RecordDate.ToShortDateString().Contains(searchValue4)).ToList();
+                    if (!string.IsNullOrEmpty(searchValue4))
+                    {
+                        filteredBooks = filteredBooks.Where(x => x.RecordDate.ToShortDateString().Contains(searchValue4)).ToList();
+                    }
+                   
                 }
 
                 dataGridView1.DataSource = filteredBooks;
