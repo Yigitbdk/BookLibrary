@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Library_Project
 {
@@ -19,9 +20,16 @@ namespace Library_Project
         public Form2()
         {
             InitializeComponent();
-            dataGridView1.DataSource = db.Books.ToList();           
+            dataGridView1.DataSource = db.Books.ToList();
+            dataGridView1.Columns["ID"].Visible = false;
+            dataGridView1.Columns["Customers"].Visible = false;
+            dataGridView1.Columns["Reservations"].Visible = false;
+            dataGridView1.Columns[1].Width = 131;
+            dataGridView1.Columns[2].Width = 131;
+            dataGridView1.Columns[3].Width = 220;
         }
-        //Testt
+
+        int indexRow;
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -55,10 +63,6 @@ namespace Library_Project
         {
 
         }
-        private void BOOKS_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -75,8 +79,6 @@ namespace Library_Project
             db.SaveChanges();
             LoadDatagrid();
             SetDefaultCellsValue();
-
-            MessageBox.Show("Added");
         }
 
         private void textBoxPageNumber_TextChanged(object sender, EventArgs e)
@@ -90,12 +92,11 @@ namespace Library_Project
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
                 if (isSelected)
-                {               
+                {
                     db.Books.Remove((Book)row.DataBoundItem);
                 }
             }
 
-            //db.Books.Remove(new Book() { Id = 10 });
             db.SaveChanges();
             LoadDatagrid();
             SetDefaultCellsValue();
@@ -129,6 +130,40 @@ namespace Library_Project
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dateTimePickerRecord_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            DataGridViewRow newDataRow = new DataGridViewRow();
+            newDataRow = dataGridView1.Rows[indexRow];
+
+            newDataRow.Cells[2].Value = textBoxName.Text;
+            newDataRow.Cells[3].Value = textBoxWriter.Text;
+            newDataRow.Cells[4].Value = comboBoxGenre.Text;
+            newDataRow.Cells[5].Value = numericUpDownPage.Text;
+            newDataRow.Cells[6].Value = dateTimePickerRecord.Text;
+            db.SaveChanges();
+
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            indexRow = e.RowIndex;
+            DataGridViewRow selectedRow = new DataGridViewRow();
+            selectedRow = dataGridView1.Rows[indexRow];
+
+            textBoxName.Text = selectedRow.Cells[2].Value.ToString();
+            textBoxWriter.Text = selectedRow.Cells[3].Value.ToString();
+            comboBoxGenre.Text = selectedRow.Cells[4].Value.ToString();
+            numericUpDownPage.Text = selectedRow.Cells[5].Value.ToString();
+            dateTimePickerRecord.Text = selectedRow.Cells[6].Value.ToString();
         }
     }
 }
