@@ -49,16 +49,9 @@
             numericUpDownPage = new System.Windows.Forms.NumericUpDown();
             comboBoxGenre = new System.Windows.Forms.ComboBox();
             dateTimePickerRecord = new System.Windows.Forms.DateTimePicker();
-            textBox1 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
-            dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            comboBox2 = new System.Windows.Forms.ComboBox();
-            label8 = new System.Windows.Forms.Label();
-            label9 = new System.Windows.Forms.Label();
             buttonSearch = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
+            buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownPage).BeginInit();
             panel1.SuspendLayout();
@@ -69,10 +62,10 @@
             BOOKS.AutoSize = true;
             BOOKS.Font = new System.Drawing.Font("Sylfaen", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             BOOKS.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            BOOKS.Location = new System.Drawing.Point(247, 22);
+            BOOKS.Location = new System.Drawing.Point(259, 9);
             BOOKS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             BOOKS.Name = "BOOKS";
-            BOOKS.Size = new System.Drawing.Size(455, 156);
+            BOOKS.Size = new System.Drawing.Size(372, 126);
             BOOKS.TabIndex = 3;
             BOOKS.Text = "BOOKS";
             // 
@@ -82,10 +75,10 @@
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button3.Location = new System.Drawing.Point(11, 519);
-            button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            button3.Location = new System.Drawing.Point(12, 529);
+            button3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(94, 48);
+            button3.Size = new System.Drawing.Size(82, 36);
             button3.TabIndex = 4;
             button3.Text = "Back";
             button3.UseVisualStyleBackColor = false;
@@ -121,7 +114,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.GridColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridView1.Location = new System.Drawing.Point(12, 151);
+            dataGridView1.Location = new System.Drawing.Point(12, 138);
+            dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
@@ -138,7 +132,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(856, 353);
+            dataGridView1.Size = new System.Drawing.Size(865, 377);
             dataGridView1.TabIndex = 12;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.RowHeaderMouseClick += dataGridView1_RowHeaderMouseClick;
@@ -150,9 +144,10 @@
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button1.Location = new System.Drawing.Point(401, 519);
+            button1.Location = new System.Drawing.Point(571, 529);
+            button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(112, 48);
+            button1.Size = new System.Drawing.Size(98, 36);
             button1.TabIndex = 13;
             button1.Text = "Add";
             button1.UseMnemonic = false;
@@ -164,9 +159,9 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label2.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label2.Location = new System.Drawing.Point(14, 163);
+            label2.Location = new System.Drawing.Point(13, 179);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(85, 35);
+            label2.Size = new System.Drawing.Size(69, 27);
             label2.TabIndex = 21;
             label2.Text = "Name";
             // 
@@ -175,9 +170,9 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label3.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label3.Location = new System.Drawing.Point(14, 233);
+            label3.Location = new System.Drawing.Point(15, 240);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(98, 35);
+            label3.Size = new System.Drawing.Size(79, 27);
             label3.TabIndex = 22;
             label3.Text = "Writer";
             // 
@@ -186,9 +181,9 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label4.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label4.Location = new System.Drawing.Point(14, 303);
+            label4.Location = new System.Drawing.Point(13, 300);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(87, 35);
+            label4.Size = new System.Drawing.Size(72, 27);
             label4.TabIndex = 23;
             label4.Text = "Genre";
             // 
@@ -197,7 +192,7 @@
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label5.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label5.Location = new System.Drawing.Point(14, 444);
+            label5.Location = new System.Drawing.Point(15, 419);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(67, 27);
             label5.TabIndex = 24;
@@ -208,9 +203,9 @@
             labelRecord.AutoSize = true;
             labelRecord.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             labelRecord.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            labelRecord.Location = new System.Drawing.Point(14, 374);
+            labelRecord.Location = new System.Drawing.Point(15, 361);
             labelRecord.Name = "labelRecord";
-            labelRecord.Size = new System.Drawing.Size(166, 35);
+            labelRecord.Size = new System.Drawing.Size(133, 27);
             labelRecord.TabIndex = 25;
             labelRecord.Text = "Record Date";
             // 
@@ -221,9 +216,10 @@
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button2.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button2.Location = new System.Drawing.Point(519, 519);
+            button2.Location = new System.Drawing.Point(675, 529);
+            button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(112, 48);
+            button2.Size = new System.Drawing.Size(98, 36);
             button2.TabIndex = 26;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = false;
@@ -235,9 +231,10 @@
             buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonUpdate.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonUpdate.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonUpdate.Location = new System.Drawing.Point(637, 519);
+            buttonUpdate.Location = new System.Drawing.Point(779, 529);
+            buttonUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             buttonUpdate.Name = "buttonUpdate";
-            buttonUpdate.Size = new System.Drawing.Size(112, 48);
+            buttonUpdate.Size = new System.Drawing.Size(98, 36);
             buttonUpdate.TabIndex = 27;
             buttonUpdate.Text = "Update";
             buttonUpdate.UseVisualStyleBackColor = false;
@@ -249,9 +246,10 @@
             textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBoxName.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             textBoxName.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxName.Location = new System.Drawing.Point(14, 193);
+            textBoxName.Location = new System.Drawing.Point(17, 208);
+            textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new System.Drawing.Size(262, 29);
+            textBoxName.Size = new System.Drawing.Size(230, 29);
             textBoxName.TabIndex = 30;
             textBoxName.TextChanged += textBoxId_TextChanged;
             // 
@@ -261,9 +259,10 @@
             textBoxWriter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBoxWriter.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             textBoxWriter.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxWriter.Location = new System.Drawing.Point(14, 263);
+            textBoxWriter.Location = new System.Drawing.Point(17, 269);
+            textBoxWriter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             textBoxWriter.Name = "textBoxWriter";
-            textBoxWriter.Size = new System.Drawing.Size(262, 29);
+            textBoxWriter.Size = new System.Drawing.Size(230, 29);
             textBoxWriter.TabIndex = 32;
             // 
             // numericUpDownPage
@@ -271,9 +270,10 @@
             numericUpDownPage.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             numericUpDownPage.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             numericUpDownPage.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            numericUpDownPage.Location = new System.Drawing.Point(14, 474);
+            numericUpDownPage.Location = new System.Drawing.Point(17, 448);
+            numericUpDownPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             numericUpDownPage.Name = "numericUpDownPage";
-            numericUpDownPage.Size = new System.Drawing.Size(96, 29);
+            numericUpDownPage.Size = new System.Drawing.Size(84, 29);
             numericUpDownPage.TabIndex = 36;
             numericUpDownPage.ValueChanged += numericUpDownPage_ValueChanged;
             // 
@@ -284,9 +284,10 @@
             comboBoxGenre.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             comboBoxGenre.FormattingEnabled = true;
             comboBoxGenre.Items.AddRange(new object[] { "True Crime", "Biographies and Autobiographies", "Novel", "Poetry", "Action and Adventure", "Comic Book", "Manga", "Detective and Mystery", "Fantasy", "Historical Fiction", "Horror", "Romance", "Science Fiction", "Cookbooks", "Essays", "History" });
-            comboBoxGenre.Location = new System.Drawing.Point(14, 333);
+            comboBoxGenre.Location = new System.Drawing.Point(17, 329);
+            comboBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             comboBoxGenre.Name = "comboBoxGenre";
-            comboBoxGenre.Size = new System.Drawing.Size(262, 30);
+            comboBoxGenre.Size = new System.Drawing.Size(230, 30);
             comboBoxGenre.TabIndex = 37;
             comboBoxGenre.SelectedIndexChanged += comboBoxGenre_SelectedIndexChanged;
             // 
@@ -298,99 +299,12 @@
             dateTimePickerRecord.CalendarTitleForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             dateTimePickerRecord.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             dateTimePickerRecord.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dateTimePickerRecord.Location = new System.Drawing.Point(14, 404);
+            dateTimePickerRecord.Location = new System.Drawing.Point(17, 388);
+            dateTimePickerRecord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             dateTimePickerRecord.Name = "dateTimePickerRecord";
-            dateTimePickerRecord.Size = new System.Drawing.Size(262, 29);
+            dateTimePickerRecord.Size = new System.Drawing.Size(230, 29);
             dateTimePickerRecord.TabIndex = 38;
             dateTimePickerRecord.ValueChanged += dateTimePickerRecord_ValueChanged;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBox1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            textBox1.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBox1.Location = new System.Drawing.Point(150, 34);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(123, 25);
-            textBox1.TabIndex = 42;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBox2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            textBox2.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBox2.Location = new System.Drawing.Point(11, 34);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(123, 25);
-            textBox2.TabIndex = 41;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label1.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label1.Location = new System.Drawing.Point(150, 9);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(77, 26);
-            label1.TabIndex = 40;
-            label1.Text = "Writer";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label7.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label7.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label7.Location = new System.Drawing.Point(12, 9);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(68, 26);
-            label7.TabIndex = 39;
-            label7.Text = "Name";
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new System.Drawing.Point(647, 62);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new System.Drawing.Size(162, 27);
-            dateTimePicker2.TabIndex = 48;
-            // 
-            // comboBox2
-            // 
-            comboBox2.BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            comboBox2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            comboBox2.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new System.Drawing.Point(11, 87);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(262, 26);
-            comboBox2.TabIndex = 47;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label8.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label8.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label8.Location = new System.Drawing.Point(647, 37);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(128, 26);
-            label8.TabIndex = 44;
-            label8.Text = "Record Date";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label9.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label9.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label9.Location = new System.Drawing.Point(11, 62);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(69, 26);
-            label9.TabIndex = 43;
-            label9.Text = "Genre";
             // 
             // buttonSearch
             // 
@@ -398,10 +312,10 @@
             buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonSearch.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonSearch.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonSearch.Location = new System.Drawing.Point(756, 519);
-            buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            buttonSearch.Location = new System.Drawing.Point(224, 529);
+            buttonSearch.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new System.Drawing.Size(112, 48);
+            buttonSearch.Size = new System.Drawing.Size(98, 36);
             buttonSearch.TabIndex = 50;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = false;
@@ -420,35 +334,46 @@
             panel1.Controls.Add(numericUpDownPage);
             panel1.Controls.Add(comboBoxGenre);
             panel1.Controls.Add(dateTimePickerRecord);
-            panel1.Location = new System.Drawing.Point(885, 1);
+            panel1.Location = new System.Drawing.Point(890, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(289, 716);
+            panel1.Size = new System.Drawing.Size(268, 587);
             panel1.TabIndex = 51;
+            // 
+            // buttonRefresh
+            // 
+            buttonRefresh.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonRefresh.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonRefresh.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            buttonRefresh.Location = new System.Drawing.Point(329, 529);
+            buttonRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new System.Drawing.Size(98, 36);
+            buttonRefresh.TabIndex = 52;
+            buttonRefresh.Text = "Refresh";
+            buttonRefresh.UseMnemonic = false;
+            buttonRefresh.UseVisualStyleBackColor = false;
+            buttonRefresh.Click += buttonRefresh_Click;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            ClientSize = new System.Drawing.Size(1173, 581);
+            ClientSize = new System.Drawing.Size(1158, 575);
+            Controls.Add(buttonRefresh);
             Controls.Add(panel1);
             Controls.Add(buttonUpdate);
             Controls.Add(button3);
             Controls.Add(dataGridView1);
-            Controls.Add(dateTimePicker2);
             Controls.Add(BOOKS);
             Controls.Add(button2);
             Controls.Add(buttonSearch);
             Controls.Add(button1);
-            Controls.Add(comboBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label7);
-            Controls.Add(label8);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(label9);
             ForeColor = System.Drawing.Color.SandyBrown;
-            Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             Name = "Form2";
             Text = "Books";
             FormClosing += Form2_FormClosing;
@@ -478,15 +403,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDownPage;
         private System.Windows.Forms.ComboBox comboBoxGenre;
         private System.Windows.Forms.DateTimePicker dateTimePickerRecord;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

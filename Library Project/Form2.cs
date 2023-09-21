@@ -24,12 +24,12 @@ namespace Library_Project
         {
             InitializeComponent();
             dataGridView1.DataSource = db.Books.ToList();
-            dataGridView1.Columns["ID"].Visible = false;
-            dataGridView1.Columns["Customers"].Visible = false;
-            dataGridView1.Columns["Reservations"].Visible = false;
             dataGridView1.Columns[1].Width = 131;
             dataGridView1.Columns[2].Width = 131;
             dataGridView1.Columns[3].Width = 220;
+            dataGridView1.Columns["ID"].Visible = false;
+            dataGridView1.Columns["Customers"].Visible = false;
+            dataGridView1.Columns["Reservations"].Visible = false;
         }
 
         int indexRow;
@@ -135,15 +135,49 @@ namespace Library_Project
 
         }
 
+        private void dateTimePickerRecord_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            DataGridViewRow newDataRow = new DataGridViewRow();
+            newDataRow = dataGridView1.Rows[indexRow];
+
+            newDataRow.Cells[2].Value = textBoxName.Text;
+            newDataRow.Cells[3].Value = textBoxWriter.Text;
+            newDataRow.Cells[4].Value = comboBoxGenre.Text;
+            newDataRow.Cells[5].Value = numericUpDownPage.Text;
+            newDataRow.Cells[6].Value = dateTimePickerRecord.Text;
+            db.SaveChanges();
+
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            indexRow = e.RowIndex;
+            DataGridViewRow selectedRow = new DataGridViewRow();
+            selectedRow = dataGridView1.Rows[indexRow];
+
+            textBoxName.Text = selectedRow.Cells[2].Value.ToString();
+            textBoxWriter.Text = selectedRow.Cells[3].Value.ToString();
+            comboBoxGenre.Text = selectedRow.Cells[4].Value.ToString();
+            numericUpDownPage.Text = selectedRow.Cells[5].Value.ToString();
+            dateTimePickerRecord.Text = selectedRow.Cells[6].Value.ToString();
+        }
+
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            string searchValue1 = textBox2.Text.ToLower();
-            string searchValue2 = textBox1.Text.ToLower();
-            string searchValue3 = comboBox2.SelectedItem?.ToString().ToLower();
-            string searchValue4 = dateTimePicker2.Value.ToShortDateString();
+            string searchValue1 = textBoxName.Text.ToLower();
+            string searchValue2 = textBoxWriter.Text.ToLower();
+            string searchValue3 = comboBoxGenre.SelectedItem?.ToString().ToLower();
+            string searchValue4 = dateTimePickerRecord.Value.ToShortDateString();
             try
             {
-                
+
                 var filteredBooks = db.Books.ToList();
                 if (!string.IsNullOrEmpty(searchValue1))
                 {
@@ -183,38 +217,10 @@ namespace Library_Project
 
         }
 
-        private void dateTimePickerRecord_ValueChanged(object sender, EventArgs e)
+        private void buttonRefresh_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            DataGridViewRow newDataRow = new DataGridViewRow();
-            newDataRow = dataGridView1.Rows[indexRow];
-
-            newDataRow.Cells[2].Value = textBoxName.Text;
-            newDataRow.Cells[3].Value = textBoxWriter.Text;
-            newDataRow.Cells[4].Value = comboBoxGenre.Text;
-            newDataRow.Cells[5].Value = numericUpDownPage.Text;
-            newDataRow.Cells[6].Value = dateTimePickerRecord.Text;
-            db.SaveChanges();
-
-        }
-
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-            indexRow = e.RowIndex;
-            DataGridViewRow selectedRow = new DataGridViewRow();
-            selectedRow = dataGridView1.Rows[indexRow];
-
-            textBoxName.Text = selectedRow.Cells[2].Value.ToString();
-            textBoxWriter.Text = selectedRow.Cells[3].Value.ToString();
-            comboBoxGenre.Text = selectedRow.Cells[4].Value.ToString();
-            numericUpDownPage.Text = selectedRow.Cells[5].Value.ToString();
-            dateTimePickerRecord.Text = selectedRow.Cells[6].Value.ToString();
+            LoadDatagrid();
+            SetDefaultCellsValue();
         }
     }
 }
