@@ -2,10 +2,13 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -129,6 +132,54 @@ namespace Library_Project
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string searchValue1 = textBox2.Text.ToLower();
+            string searchValue2 = textBox1.Text.ToLower();
+            string searchValue3 = comboBox2.SelectedItem?.ToString().ToLower();
+            string searchValue4 = dateTimePicker2.Value.ToShortDateString();
+            try
+            {
+                
+                var filteredBooks = db.Books.ToList();
+                if (!string.IsNullOrEmpty(searchValue1))
+                {
+                    filteredBooks = filteredBooks.Where(x => x.Name.ToLower().Contains(searchValue1)).ToList();
+
+                }
+
+                if (!string.IsNullOrEmpty(searchValue2))
+                {
+                    filteredBooks = filteredBooks.Where(x => x.Writer.ToLower().Contains(searchValue2)).ToList();
+
+                }
+
+                if (!string.IsNullOrEmpty(searchValue3))
+                {
+                    filteredBooks = filteredBooks.Where(x => x.Genre.ToLower().Contains(searchValue3)).ToList();
+                }
+
+                if (!string.IsNullOrEmpty(searchValue4))
+                {
+                    filteredBooks = filteredBooks.Where(x => x.RecordDate.ToShortDateString().Contains(searchValue4)).ToList();
+                }
+
+                dataGridView1.DataSource = filteredBooks;
+                SetDefaultCellsValue();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void numericUpDownPage_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDownPage.Maximum = 9999;
+            numericUpDownPage.Minimum = 0;
 
         }
 

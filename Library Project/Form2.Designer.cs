@@ -72,7 +72,7 @@
             BOOKS.Location = new System.Drawing.Point(247, 22);
             BOOKS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             BOOKS.Name = "BOOKS";
-            BOOKS.Size = new System.Drawing.Size(372, 126);
+            BOOKS.Size = new System.Drawing.Size(455, 156);
             BOOKS.TabIndex = 3;
             BOOKS.Text = "BOOKS";
             // 
@@ -131,6 +131,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(245, 179, 1);
@@ -165,7 +166,7 @@
             label2.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             label2.Location = new System.Drawing.Point(14, 163);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(69, 27);
+            label2.Size = new System.Drawing.Size(85, 35);
             label2.TabIndex = 21;
             label2.Text = "Name";
             // 
@@ -176,7 +177,7 @@
             label3.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             label3.Location = new System.Drawing.Point(14, 233);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(79, 27);
+            label3.Size = new System.Drawing.Size(98, 35);
             label3.TabIndex = 22;
             label3.Text = "Writer";
             // 
@@ -187,7 +188,7 @@
             label4.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             label4.Location = new System.Drawing.Point(14, 303);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(72, 27);
+            label4.Size = new System.Drawing.Size(87, 35);
             label4.TabIndex = 23;
             label4.Text = "Genre";
             // 
@@ -209,7 +210,7 @@
             labelRecord.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             labelRecord.Location = new System.Drawing.Point(14, 374);
             labelRecord.Name = "labelRecord";
-            labelRecord.Size = new System.Drawing.Size(133, 27);
+            labelRecord.Size = new System.Drawing.Size(166, 35);
             labelRecord.TabIndex = 25;
             labelRecord.Text = "Record Date";
             // 
@@ -274,6 +275,7 @@
             numericUpDownPage.Name = "numericUpDownPage";
             numericUpDownPage.Size = new System.Drawing.Size(96, 29);
             numericUpDownPage.TabIndex = 36;
+            numericUpDownPage.ValueChanged += numericUpDownPage_ValueChanged;
             // 
             // comboBoxGenre
             // 
@@ -332,7 +334,7 @@
             label1.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             label1.Location = new System.Drawing.Point(150, 9);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(62, 22);
+            label1.Size = new System.Drawing.Size(77, 26);
             label1.TabIndex = 40;
             label1.Text = "Writer";
             // 
@@ -344,7 +346,7 @@
             label7.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             label7.Location = new System.Drawing.Point(12, 9);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(53, 22);
+            label7.Size = new System.Drawing.Size(68, 26);
             label7.TabIndex = 39;
             label7.Text = "Name";
             // 
@@ -352,7 +354,7 @@
             // 
             dateTimePicker2.Location = new System.Drawing.Point(647, 62);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new System.Drawing.Size(142, 23);
+            dateTimePicker2.Size = new System.Drawing.Size(162, 27);
             dateTimePicker2.TabIndex = 48;
             // 
             // comboBox2
@@ -374,7 +376,7 @@
             label8.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             label8.Location = new System.Drawing.Point(647, 37);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(102, 22);
+            label8.Size = new System.Drawing.Size(128, 26);
             label8.TabIndex = 44;
             label8.Text = "Record Date";
             // 
@@ -386,7 +388,7 @@
             label9.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
             label9.Location = new System.Drawing.Point(11, 62);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(54, 22);
+            label9.Size = new System.Drawing.Size(69, 26);
             label9.TabIndex = 43;
             label9.Text = "Genre";
             // 
@@ -403,6 +405,7 @@
             buttonSearch.TabIndex = 50;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = false;
+            buttonSearch.Click += buttonSearch_Click;
             // 
             // panel1
             // 
@@ -424,7 +427,7 @@
             // 
             // Form2
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
             ClientSize = new System.Drawing.Size(1173, 581);
@@ -445,7 +448,7 @@
             Controls.Add(textBox2);
             Controls.Add(label9);
             ForeColor = System.Drawing.Color.SandyBrown;
-            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             Name = "Form2";
             Text = "Books";
             FormClosing += Form2_FormClosing;
