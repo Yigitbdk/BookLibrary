@@ -1,4 +1,5 @@
 ﻿using Library_Project.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +19,7 @@ namespace Library_Project
         public Form4()
         {
             InitializeComponent();
-            dataGridView1.DataSource = db.Reservations.ToList();
-            dataGridView1.Columns["Id"].Visible = false;
-            dataGridView1.Columns["BookId"].Visible = false;
-            dataGridView1.Columns["CustomerId"].Visible = false;
+            LoadDatagrid();
             comboBox_Listele();
         }
 
@@ -74,8 +72,20 @@ namespace Library_Project
 
         private void LoadDatagrid()
         {
+            dataGridView1.Columns.Clear();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Columns.Add("DateTake", "DateTake");
+            dataGridView1.Columns["DateTake"].DataPropertyName = "DateTake";
             
-            dataGridView1.DataSource = db.Reservations.ToList();
+            dataGridView1.Columns.Add("BookName", "Book");
+            dataGridView1.Columns["BookName"].DataPropertyName = "BookName";
+
+            dataGridView1.Columns.Add("CustomerFullname", "Customer");
+            dataGridView1.Columns["CustomerFullname"].DataPropertyName = "CustomerFullname";
+
+            dataGridView1.DataSource = db.Reservations.Include(x => x.Book).Include(x => x.Customer).ToList();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -87,7 +97,8 @@ namespace Library_Project
                 BookId = Convert.ToInt32(comboBox2.SelectedValue),
                 CustomerId = Convert.ToInt32(comboBox1.SelectedValue),
                 DateTake = DateTime.Parse(dateTimePicker1.Text),
-                DateReturn = DateTime.Parse(dateTimePicker2.Text)
+                DateReturn = DateTime.Parse(dateTimePicker2.Text),
+
 
 
             };
@@ -103,6 +114,7 @@ namespace Library_Project
 
         }
 
+
         private void comboBox_Listele()
         {
             comboBox2.DataSource = db.Books.ToList();
@@ -111,10 +123,18 @@ namespace Library_Project
 
 
             comboBox1.DataSource = db.Customers.ToList();
-            comboBox1.DisplayMember = "Name" + "Surname";
+            comboBox2.DisplayMember = "Name" + "Surname";
             comboBox1.ValueMember = "Id";
 
         }
 
+        private void comboBox1_Format(object sender, ListControlConvertEventArgs e)
+        {
+            string firstname = ((Customer)e.ListItem).Name;
+            string lastname = ((Customer)e.ListItem).Surname;
+            e.Value = firstname + " " + lastname;
+        }
+
+       
     }
 }
