@@ -5,9 +5,7 @@ namespace Library_Project.Models;
 
 public partial class Customer
 {
-    public int Id { get; set; }
-
-    public int FkBookId { get; set; }
+    public int ID { get; set; }
 
     public string Name { get; set; }
 
@@ -15,13 +13,11 @@ public partial class Customer
 
     public short? Age { get; set; }
 
-    public bool? Male { get; set; }
+    public string Gender { get; set; }
 
     public DateTime CreateDate { get; set; }
 
-    public string TelNr { get; set; }
+    public string TelNo { get; set; }
 
-    public virtual Book FkBook { get; set; }
-
-    public virtual ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
+   // public virtual ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
 }

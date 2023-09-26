@@ -58,9 +58,9 @@ public partial class BookLibraryContext : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_CUSTOMERS");
+            entity.HasKey(e => e.ID).HasName("PK_CUSTOMERS");
 
-            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.ID).HasColumnName("ID");
             entity.Property(e => e.CreateDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("date");
@@ -72,14 +72,11 @@ public partial class BookLibraryContext : DbContext
                 .IsRequired()
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.TelNr)
+            entity.Property(e => e.Age)
+                .IsUnicode(false);
+            entity.Property(e => e.TelNo)
                 .HasMaxLength(15)
                 .IsUnicode(false);
-
-            entity.HasOne(d => d.FkBook).WithMany(p => p.Customers)
-                .HasForeignKey(d => d.FkBookId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Customers__FkBoo__440B1D61");
         });
 
         modelBuilder.Entity<Reservation>(entity =>
@@ -90,15 +87,6 @@ public partial class BookLibraryContext : DbContext
             entity.Property(e => e.DateReturn).HasColumnType("date");
             entity.Property(e => e.DateTake).HasColumnType("date");
 
-            entity.HasOne(d => d.Book).WithMany(p => p.Reservations)
-                .HasForeignKey(d => d.BookId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservati__BookI__4316F928");
-
-            entity.HasOne(d => d.Customer).WithMany(p => p.Reservations)
-                .HasForeignKey(d => d.CustomerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservati__Custo__2B3F6F97");
         });
 
         OnModelCreatingPartial(modelBuilder);

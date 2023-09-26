@@ -84,11 +84,6 @@ namespace Library_Project
             SetDefaultCellsValue();
         }
 
-        private void textBoxPageNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -118,26 +113,6 @@ namespace Library_Project
         private void LoadDatagrid()
         {
             dataGridView1.DataSource = db.Books.ToList();
-        }
-
-        private void textBoxId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxGenre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerRecord_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -190,7 +165,7 @@ namespace Library_Project
                     filteredBooks = filteredBooks.Where(x => x.Writer.ToLower().Contains(searchValue2)).ToList();
 
                 }
-                               
+
                 if (!string.IsNullOrEmpty(searchValue3))
                 {
                     filteredBooks = filteredBooks.Where(x => x.Genre.ToLower().Contains(searchValue3)).ToList();
@@ -202,7 +177,7 @@ namespace Library_Project
                     {
                         filteredBooks = filteredBooks.Where(x => x.RecordDate.ToShortDateString().Contains(searchValue4)).ToList();
                     }
-                   
+
                 }
 
                 dataGridView1.DataSource = filteredBooks;

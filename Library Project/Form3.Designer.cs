@@ -30,35 +30,38 @@
         {
             button1 = new System.Windows.Forms.Button();
             BOOKS = new System.Windows.Forms.Label();
-            textBoxDate = new System.Windows.Forms.TextBox();
-            textBoxPageNumber = new System.Windows.Forms.TextBox();
-            textBoxGenre = new System.Windows.Forms.TextBox();
-            textBoxWriter = new System.Windows.Forms.TextBox();
-            textBoxName = new System.Windows.Forms.TextBox();
-            textBoxId = new System.Windows.Forms.TextBox();
             button4 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             label6 = new System.Windows.Forms.Label();
-            label5 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             button3 = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
+            buttonRefresh = new System.Windows.Forms.Button();
+            buttonSearch = new System.Windows.Forms.Button();
+            textBoxCustomerName = new System.Windows.Forms.TextBox();
+            textBoxSurname = new System.Windows.Forms.TextBox();
+            textBoxPhoneNo = new System.Windows.Forms.TextBox();
+            label9 = new System.Windows.Forms.Label();
+            label10 = new System.Windows.Forms.Label();
+            label11 = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
+            numericUpDownAge = new System.Windows.Forms.NumericUpDown();
+            comboBoxGender = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownAge).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
             button1.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button1.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button1.Location = new System.Drawing.Point(27, 449);
+            button1.Location = new System.Drawing.Point(13, 529);
             button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(62, 48);
+            button1.Size = new System.Drawing.Size(82, 36);
             button1.TabIndex = 6;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
@@ -67,166 +70,64 @@
             // BOOKS
             // 
             BOOKS.AutoSize = true;
-            BOOKS.Font = new System.Drawing.Font("Sylfaen", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            BOOKS.Font = new System.Drawing.Font("Sylfaen", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             BOOKS.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            BOOKS.Location = new System.Drawing.Point(251, 24);
+            BOOKS.Location = new System.Drawing.Point(135, 22);
             BOOKS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             BOOKS.Name = "BOOKS";
-            BOOKS.Size = new System.Drawing.Size(417, 84);
+            BOOKS.Size = new System.Drawing.Size(622, 126);
             BOOKS.TabIndex = 10;
             BOOKS.Text = "CUSTOMERS";
-            // 
-            // textBoxDate
-            // 
-            textBoxDate.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxDate.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxDate.Location = new System.Drawing.Point(745, 359);
-            textBoxDate.Name = "textBoxDate";
-            textBoxDate.Size = new System.Drawing.Size(144, 23);
-            textBoxDate.TabIndex = 51;
-            // 
-            // textBoxPageNumber
-            // 
-            textBoxPageNumber.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxPageNumber.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxPageNumber.Location = new System.Drawing.Point(745, 209);
-            textBoxPageNumber.Name = "textBoxPageNumber";
-            textBoxPageNumber.Size = new System.Drawing.Size(144, 23);
-            textBoxPageNumber.TabIndex = 50;
-            // 
-            // textBoxGenre
-            // 
-            textBoxGenre.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxGenre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxGenre.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxGenre.Location = new System.Drawing.Point(745, 259);
-            textBoxGenre.Name = "textBoxGenre";
-            textBoxGenre.Size = new System.Drawing.Size(144, 23);
-            textBoxGenre.TabIndex = 49;
-            // 
-            // textBoxWriter
-            // 
-            textBoxWriter.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxWriter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxWriter.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxWriter.Location = new System.Drawing.Point(745, 309);
-            textBoxWriter.Name = "textBoxWriter";
-            textBoxWriter.Size = new System.Drawing.Size(144, 23);
-            textBoxWriter.TabIndex = 48;
-            // 
-            // textBoxName
-            // 
-            textBoxName.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxName.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxName.Location = new System.Drawing.Point(745, 159);
-            textBoxName.Name = "textBoxName";
-            textBoxName.Size = new System.Drawing.Size(144, 23);
-            textBoxName.TabIndex = 47;
-            // 
-            // textBoxId
-            // 
-            textBoxId.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            textBoxId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            textBoxId.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxId.Location = new System.Drawing.Point(745, 409);
-            textBoxId.Name = "textBoxId";
-            textBoxId.Size = new System.Drawing.Size(144, 23);
-            textBoxId.TabIndex = 46;
             // 
             // button4
             // 
             button4.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button4.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button4.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button4.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button4.Location = new System.Drawing.Point(527, 449);
+            button4.Location = new System.Drawing.Point(778, 528);
             button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(185, 48);
+            button4.Size = new System.Drawing.Size(98, 36);
             button4.TabIndex = 45;
-            button4.Text = "Save to the Database";
+            button4.Text = "Update";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button2
             // 
             button2.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button2.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button2.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button2.Location = new System.Drawing.Point(336, 449);
+            button2.Location = new System.Drawing.Point(674, 528);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(185, 48);
+            button2.Size = new System.Drawing.Size(98, 36);
             button2.TabIndex = 44;
-            button2.Text = "Delete The Book";
+            button2.Text = "Delete";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label6.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label6.Location = new System.Drawing.Point(745, 385);
+            label6.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
+            label6.Location = new System.Drawing.Point(17, 307);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(120, 22);
+            label6.Size = new System.Drawing.Size(160, 27);
             label6.TabIndex = 43;
             label6.Text = "Phone Number";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label5.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label5.Location = new System.Drawing.Point(745, 234);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(39, 22);
-            label5.TabIndex = 42;
-            label5.Text = "Age";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label4.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label4.Location = new System.Drawing.Point(745, 335);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(45, 22);
-            label4.TabIndex = 41;
-            label4.Text = "Date";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label3.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label3.Location = new System.Drawing.Point(745, 185);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(74, 22);
-            label3.TabIndex = 40;
-            label3.Text = "Surname";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label2.Location = new System.Drawing.Point(745, 285);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(48, 22);
-            label2.TabIndex = 39;
-            label2.Text = "Male";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            label1.Location = new System.Drawing.Point(745, 135);
+            label1.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
+            label1.Location = new System.Drawing.Point(17, 187);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(53, 22);
+            label1.Size = new System.Drawing.Size(69, 27);
             label1.TabIndex = 38;
             label1.Text = "Name";
             // 
@@ -235,52 +136,186 @@
             button3.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button3.Location = new System.Drawing.Point(145, 449);
+            button3.Location = new System.Drawing.Point(570, 528);
             button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(185, 48);
+            button3.Size = new System.Drawing.Size(98, 36);
             button3.TabIndex = 37;
-            button3.Text = "Add New Book";
+            button3.Text = "Add";
             button3.UseMnemonic = false;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridView1.Location = new System.Drawing.Point(27, 136);
+            dataGridView1.Location = new System.Drawing.Point(13, 151);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(687, 283);
+            dataGridView1.Size = new System.Drawing.Size(863, 372);
             dataGridView1.TabIndex = 36;
+            // 
+            // buttonRefresh
+            // 
+            buttonRefresh.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonRefresh.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonRefresh.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            buttonRefresh.Location = new System.Drawing.Point(334, 528);
+            buttonRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new System.Drawing.Size(98, 36);
+            buttonRefresh.TabIndex = 54;
+            buttonRefresh.Text = "Refresh";
+            buttonRefresh.UseMnemonic = false;
+            buttonRefresh.UseVisualStyleBackColor = false;
+            buttonRefresh.Click += buttonRefresh_Click;
+            // 
+            // buttonSearch
+            // 
+            buttonSearch.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonSearch.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonSearch.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            buttonSearch.Location = new System.Drawing.Point(229, 528);
+            buttonSearch.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            buttonSearch.Name = "buttonSearch";
+            buttonSearch.Size = new System.Drawing.Size(98, 36);
+            buttonSearch.TabIndex = 53;
+            buttonSearch.Text = "Search";
+            buttonSearch.UseVisualStyleBackColor = false;
+            buttonSearch.Click += buttonSearch_Click;
+            // 
+            // textBoxCustomerName
+            // 
+            textBoxCustomerName.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            textBoxCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            textBoxCustomerName.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            textBoxCustomerName.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
+            textBoxCustomerName.Location = new System.Drawing.Point(17, 216);
+            textBoxCustomerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            textBoxCustomerName.Name = "textBoxCustomerName";
+            textBoxCustomerName.Size = new System.Drawing.Size(230, 29);
+            textBoxCustomerName.TabIndex = 56;
+            // 
+            // textBoxSurname
+            // 
+            textBoxSurname.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            textBoxSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            textBoxSurname.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            textBoxSurname.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
+            textBoxSurname.Location = new System.Drawing.Point(17, 276);
+            textBoxSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            textBoxSurname.Name = "textBoxSurname";
+            textBoxSurname.Size = new System.Drawing.Size(230, 29);
+            textBoxSurname.TabIndex = 57;
+            // 
+            // textBoxPhoneNo
+            // 
+            textBoxPhoneNo.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            textBoxPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            textBoxPhoneNo.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            textBoxPhoneNo.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
+            textBoxPhoneNo.Location = new System.Drawing.Point(17, 336);
+            textBoxPhoneNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            textBoxPhoneNo.Name = "textBoxPhoneNo";
+            textBoxPhoneNo.Size = new System.Drawing.Size(230, 29);
+            textBoxPhoneNo.TabIndex = 61;
+            textBoxPhoneNo.TextChanged += textBoxPhoneNo_TextChanged;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label9.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
+            label9.Location = new System.Drawing.Point(128, 367);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(84, 27);
+            label9.TabIndex = 64;
+            label9.Text = "Gender";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label10.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
+            label10.Location = new System.Drawing.Point(17, 367);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(50, 27);
+            label10.TabIndex = 65;
+            label10.Text = "Age";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label11.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
+            label11.Location = new System.Drawing.Point(17, 247);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(99, 27);
+            label11.TabIndex = 66;
+            label11.Text = "Surname";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            panel1.Controls.Add(numericUpDownAge);
+            panel1.Controls.Add(comboBoxGender);
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(textBoxCustomerName);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(textBoxSurname);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(textBoxPhoneNo);
+            panel1.Location = new System.Drawing.Point(892, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(268, 587);
+            panel1.TabIndex = 67;
+            // 
+            // numericUpDownAge
+            // 
+            numericUpDownAge.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            numericUpDownAge.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            numericUpDownAge.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
+            numericUpDownAge.Location = new System.Drawing.Point(17, 396);
+            numericUpDownAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            numericUpDownAge.Name = "numericUpDownAge";
+            numericUpDownAge.Size = new System.Drawing.Size(99, 29);
+            numericUpDownAge.TabIndex = 69;
+            // 
+            // comboBoxGender
+            // 
+            comboBoxGender.BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
+            comboBoxGender.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            comboBoxGender.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
+            comboBoxGender.FormattingEnabled = true;
+            comboBoxGender.Items.AddRange(new object[] { "Male", "Female" });
+            comboBoxGender.Location = new System.Drawing.Point(128, 395);
+            comboBoxGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            comboBoxGender.Name = "comboBoxGender";
+            comboBoxGender.Size = new System.Drawing.Size(119, 30);
+            comboBoxGender.TabIndex = 68;
+            comboBoxGender.SelectedIndexChanged += comboBoxMale_SelectedIndexChanged;
             // 
             // Form3
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            ClientSize = new System.Drawing.Size(934, 527);
-            Controls.Add(textBoxDate);
-            Controls.Add(textBoxPageNumber);
-            Controls.Add(textBoxGenre);
-            Controls.Add(textBoxWriter);
-            Controls.Add(textBoxName);
-            Controls.Add(textBoxId);
+            ClientSize = new System.Drawing.Size(1160, 577);
+            Controls.Add(panel1);
+            Controls.Add(buttonRefresh);
+            Controls.Add(buttonSearch);
             Controls.Add(button4);
             Controls.Add(button2);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(dataGridView1);
             Controls.Add(BOOKS);
@@ -291,6 +326,9 @@
             FormClosing += Form3_FormClosing;
             Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownAge).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -303,16 +341,24 @@
         private System.Windows.Forms.TextBox textBoxGenre;
         private System.Windows.Forms.TextBox textBoxWriter;
         private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxSurname;
+        private System.Windows.Forms.TextBox textBoxPhoneNo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxCustomerName;
+        private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.NumericUpDown numericUpDownAge;
     }
 }

@@ -73,9 +73,9 @@
             // 
             button3.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button3.Location = new System.Drawing.Point(12, 529);
+            button3.Location = new System.Drawing.Point(13, 529);
             button3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(82, 36);
@@ -114,7 +114,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.GridColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridView1.Location = new System.Drawing.Point(12, 138);
+            dataGridView1.Location = new System.Drawing.Point(13, 149);
             dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -132,9 +132,8 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(865, 377);
+            dataGridView1.Size = new System.Drawing.Size(864, 375);
             dataGridView1.TabIndex = 12;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.RowHeaderMouseClick += dataGridView1_RowHeaderMouseClick;
             // 
             // button1
@@ -251,7 +250,6 @@
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new System.Drawing.Size(230, 29);
             textBoxName.TabIndex = 30;
-            textBoxName.TextChanged += textBoxId_TextChanged;
             // 
             // textBoxWriter
             // 
@@ -289,7 +287,6 @@
             comboBoxGenre.Name = "comboBoxGenre";
             comboBoxGenre.Size = new System.Drawing.Size(230, 30);
             comboBoxGenre.TabIndex = 37;
-            comboBoxGenre.SelectedIndexChanged += comboBoxGenre_SelectedIndexChanged;
             // 
             // dateTimePickerRecord
             // 
@@ -304,7 +301,6 @@
             dateTimePickerRecord.Name = "dateTimePickerRecord";
             dateTimePickerRecord.Size = new System.Drawing.Size(230, 29);
             dateTimePickerRecord.TabIndex = 38;
-            dateTimePickerRecord.ValueChanged += dateTimePickerRecord_ValueChanged;
             // 
             // buttonSearch
             // 
@@ -312,7 +308,7 @@
             buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonSearch.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonSearch.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonSearch.Location = new System.Drawing.Point(224, 529);
+            buttonSearch.Location = new System.Drawing.Point(230, 528);
             buttonSearch.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new System.Drawing.Size(98, 36);
@@ -347,7 +343,7 @@
             buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonRefresh.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonRefresh.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonRefresh.Location = new System.Drawing.Point(329, 529);
+            buttonRefresh.Location = new System.Drawing.Point(335, 528);
             buttonRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             buttonRefresh.Name = "buttonRefresh";
             buttonRefresh.Size = new System.Drawing.Size(98, 36);
