@@ -19,6 +19,10 @@ namespace Library_Project
         {
             InitializeComponent();
             dataGridView1.DataSource = db.Reservations.ToList();
+            dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["BookId"].Visible = false;
+            dataGridView1.Columns["CustomerId"].Visible = false;
+            comboBox_Listele();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,14 +72,49 @@ namespace Library_Project
 
         }
 
+        private void LoadDatagrid()
+        {
+            
+            dataGridView1.DataSource = db.Reservations.ToList();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
 
+            var addReservation = new Reservation()
+            {
+
+                BookId = Convert.ToInt32(comboBox2.SelectedValue),
+                CustomerId = Convert.ToInt32(comboBox1.SelectedValue),
+                DateTake = DateTime.Parse(dateTimePicker1.Text),
+                DateReturn = DateTime.Parse(dateTimePicker2.Text)
+
+
+            };
+            db.Reservations.Add(addReservation);
+            db.SaveChanges();
+            LoadDatagrid();
+
+            MessageBox.Show("Booked");
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void comboBox_Listele()
+        {
+            comboBox2.DataSource = db.Books.ToList();
+            comboBox2.DisplayMember = "Name";
+            comboBox2.ValueMember = "Id";
+
+
+            comboBox1.DataSource = db.Customers.ToList();
+            comboBox1.DisplayMember = "Name" + "Surname";
+            comboBox1.ValueMember = "Id";
+
+        }
+
     }
 }
