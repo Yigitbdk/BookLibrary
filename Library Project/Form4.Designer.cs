@@ -79,6 +79,7 @@
             comboBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new System.Drawing.Size(227, 33);
+            comboBox1.Sorted = true;
             comboBox1.TabIndex = 7;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             comboBox1.Format += comboBox1_Format;
@@ -86,6 +87,7 @@
             // comboBox2
             // 
             comboBox2.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            comboBox2.DisplayMember = " ";
             comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             comboBox2.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             comboBox2.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
@@ -94,6 +96,7 @@
             comboBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new System.Drawing.Size(227, 33);
+            comboBox2.Sorted = true;
             comboBox2.TabIndex = 8;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 

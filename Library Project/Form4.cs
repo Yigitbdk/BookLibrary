@@ -74,14 +74,19 @@ namespace Library_Project
         {
             dataGridView1.Columns.Clear();
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.Columns.Add("DateTake", "DateTake");
-            dataGridView1.Columns["DateTake"].DataPropertyName = "DateTake";
-            
             dataGridView1.Columns.Add("BookName", "Book");
             dataGridView1.Columns["BookName"].DataPropertyName = "BookName";
 
             dataGridView1.Columns.Add("CustomerFullname", "Customer");
             dataGridView1.Columns["CustomerFullname"].DataPropertyName = "CustomerFullname";
+
+            dataGridView1.Columns.Add("DateTake", "Date Take");
+            dataGridView1.Columns["DateTake"].DataPropertyName = "DateTake";
+
+            dataGridView1.Columns.Add("DateReturn", "Date Return");
+            dataGridView1.Columns["DateReturn"].DataPropertyName = "DateReturn";
+
+
 
             dataGridView1.DataSource = db.Reservations.Include(x => x.Book).Include(x => x.Customer).ToList();
 
@@ -90,21 +95,21 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
 
             var addReservation = new Reservation()
             {
 
                 BookId = Convert.ToInt32(comboBox2.SelectedValue),
                 CustomerId = Convert.ToInt32(comboBox1.SelectedValue),
-                DateTake = DateTime.Parse(dateTimePicker1.Text),
-                DateReturn = DateTime.Parse(dateTimePicker2.Text),
-
-
+                DateTake = DateTime.Parse(dateTimePicker1.Value.ToShortDateString()),
+                DateReturn = DateTime.Parse(dateTimePicker2.Value.ToShortDateString()),
 
             };
             db.Reservations.Add(addReservation);
             db.SaveChanges();
             LoadDatagrid();
+
 
             MessageBox.Show("Booked");
         }
@@ -135,6 +140,6 @@ namespace Library_Project
             e.Value = firstname + " " + lastname;
         }
 
-       
+
     }
 }
