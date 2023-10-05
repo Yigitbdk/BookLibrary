@@ -62,10 +62,10 @@
             BOOKS.AutoSize = true;
             BOOKS.Font = new System.Drawing.Font("Sylfaen", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             BOOKS.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            BOOKS.Location = new System.Drawing.Point(259, 9);
-            BOOKS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            BOOKS.Location = new System.Drawing.Point(296, 12);
+            BOOKS.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             BOOKS.Name = "BOOKS";
-            BOOKS.Size = new System.Drawing.Size(372, 126);
+            BOOKS.Size = new System.Drawing.Size(455, 156);
             BOOKS.TabIndex = 3;
             BOOKS.Text = "BOOKS";
             // 
@@ -75,10 +75,10 @@
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button3.Location = new System.Drawing.Point(13, 529);
-            button3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            button3.Location = new System.Drawing.Point(15, 705);
+            button3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(82, 36);
+            button3.Size = new System.Drawing.Size(94, 48);
             button3.TabIndex = 4;
             button3.Text = "Back";
             button3.UseVisualStyleBackColor = false;
@@ -114,8 +114,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.GridColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            dataGridView1.Location = new System.Drawing.Point(13, 149);
-            dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridView1.Location = new System.Drawing.Point(15, 199);
             dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
@@ -132,7 +131,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(864, 375);
+            dataGridView1.Size = new System.Drawing.Size(987, 500);
             dataGridView1.TabIndex = 12;
             dataGridView1.RowHeaderMouseClick += dataGridView1_RowHeaderMouseClick;
             // 
@@ -143,10 +142,9 @@
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button1.Location = new System.Drawing.Point(571, 529);
-            button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            button1.Location = new System.Drawing.Point(653, 705);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(98, 36);
+            button1.Size = new System.Drawing.Size(112, 48);
             button1.TabIndex = 13;
             button1.Text = "Add";
             button1.UseMnemonic = false;
@@ -158,9 +156,9 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label2.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label2.Location = new System.Drawing.Point(13, 179);
+            label2.Location = new System.Drawing.Point(15, 239);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(69, 27);
+            label2.Size = new System.Drawing.Size(85, 35);
             label2.TabIndex = 21;
             label2.Text = "Name";
             // 
@@ -169,9 +167,9 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label3.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label3.Location = new System.Drawing.Point(15, 240);
+            label3.Location = new System.Drawing.Point(17, 320);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(79, 27);
+            label3.Size = new System.Drawing.Size(98, 35);
             label3.TabIndex = 22;
             label3.Text = "Writer";
             // 
@@ -180,9 +178,9 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label4.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label4.Location = new System.Drawing.Point(13, 300);
+            label4.Location = new System.Drawing.Point(15, 400);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(72, 27);
+            label4.Size = new System.Drawing.Size(87, 35);
             label4.TabIndex = 23;
             label4.Text = "Genre";
             // 
@@ -191,9 +189,9 @@
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label5.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            label5.Location = new System.Drawing.Point(15, 419);
+            label5.Location = new System.Drawing.Point(17, 559);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(67, 27);
+            label5.Size = new System.Drawing.Size(83, 35);
             label5.TabIndex = 24;
             label5.Text = "Pages";
             // 
@@ -202,9 +200,9 @@
             labelRecord.AutoSize = true;
             labelRecord.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             labelRecord.ForeColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            labelRecord.Location = new System.Drawing.Point(15, 361);
+            labelRecord.Location = new System.Drawing.Point(17, 481);
             labelRecord.Name = "labelRecord";
-            labelRecord.Size = new System.Drawing.Size(133, 27);
+            labelRecord.Size = new System.Drawing.Size(166, 35);
             labelRecord.TabIndex = 25;
             labelRecord.Text = "Record Date";
             // 
@@ -215,10 +213,9 @@
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button2.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button2.Location = new System.Drawing.Point(675, 529);
-            button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            button2.Location = new System.Drawing.Point(771, 705);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(98, 36);
+            button2.Size = new System.Drawing.Size(112, 48);
             button2.TabIndex = 26;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = false;
@@ -230,10 +227,9 @@
             buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonUpdate.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonUpdate.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonUpdate.Location = new System.Drawing.Point(779, 529);
-            buttonUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            buttonUpdate.Location = new System.Drawing.Point(890, 705);
             buttonUpdate.Name = "buttonUpdate";
-            buttonUpdate.Size = new System.Drawing.Size(98, 36);
+            buttonUpdate.Size = new System.Drawing.Size(112, 48);
             buttonUpdate.TabIndex = 27;
             buttonUpdate.Text = "Update";
             buttonUpdate.UseVisualStyleBackColor = false;
@@ -245,10 +241,9 @@
             textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBoxName.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             textBoxName.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxName.Location = new System.Drawing.Point(17, 208);
-            textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            textBoxName.Location = new System.Drawing.Point(19, 277);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new System.Drawing.Size(230, 29);
+            textBoxName.Size = new System.Drawing.Size(263, 34);
             textBoxName.TabIndex = 30;
             // 
             // textBoxWriter
@@ -257,10 +252,9 @@
             textBoxWriter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             textBoxWriter.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             textBoxWriter.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            textBoxWriter.Location = new System.Drawing.Point(17, 269);
-            textBoxWriter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            textBoxWriter.Location = new System.Drawing.Point(19, 359);
             textBoxWriter.Name = "textBoxWriter";
-            textBoxWriter.Size = new System.Drawing.Size(230, 29);
+            textBoxWriter.Size = new System.Drawing.Size(263, 34);
             textBoxWriter.TabIndex = 32;
             // 
             // numericUpDownPage
@@ -268,10 +262,9 @@
             numericUpDownPage.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             numericUpDownPage.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             numericUpDownPage.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
-            numericUpDownPage.Location = new System.Drawing.Point(17, 448);
-            numericUpDownPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            numericUpDownPage.Location = new System.Drawing.Point(19, 597);
             numericUpDownPage.Name = "numericUpDownPage";
-            numericUpDownPage.Size = new System.Drawing.Size(84, 29);
+            numericUpDownPage.Size = new System.Drawing.Size(96, 34);
             numericUpDownPage.TabIndex = 36;
             numericUpDownPage.ValueChanged += numericUpDownPage_ValueChanged;
             // 
@@ -282,10 +275,9 @@
             comboBoxGenre.ForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             comboBoxGenre.FormattingEnabled = true;
             comboBoxGenre.Items.AddRange(new object[] { "True Crime", "Biographies and Autobiographies", "Novel", "Poetry", "Action and Adventure", "Comic Book", "Manga", "Detective and Mystery", "Fantasy", "Historical Fiction", "Horror", "Romance", "Science Fiction", "Cookbooks", "Essays", "History" });
-            comboBoxGenre.Location = new System.Drawing.Point(17, 329);
-            comboBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            comboBoxGenre.Location = new System.Drawing.Point(19, 439);
             comboBoxGenre.Name = "comboBoxGenre";
-            comboBoxGenre.Size = new System.Drawing.Size(230, 30);
+            comboBoxGenre.Size = new System.Drawing.Size(262, 34);
             comboBoxGenre.TabIndex = 37;
             // 
             // dateTimePickerRecord
@@ -296,10 +288,9 @@
             dateTimePickerRecord.CalendarTitleForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             dateTimePickerRecord.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(254, 208, 83);
             dateTimePickerRecord.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dateTimePickerRecord.Location = new System.Drawing.Point(17, 388);
-            dateTimePickerRecord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dateTimePickerRecord.Location = new System.Drawing.Point(19, 517);
             dateTimePickerRecord.Name = "dateTimePickerRecord";
-            dateTimePickerRecord.Size = new System.Drawing.Size(230, 29);
+            dateTimePickerRecord.Size = new System.Drawing.Size(262, 34);
             dateTimePickerRecord.TabIndex = 38;
             // 
             // buttonSearch
@@ -308,10 +299,10 @@
             buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonSearch.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonSearch.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonSearch.Location = new System.Drawing.Point(230, 528);
-            buttonSearch.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            buttonSearch.Location = new System.Drawing.Point(263, 704);
+            buttonSearch.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new System.Drawing.Size(98, 36);
+            buttonSearch.Size = new System.Drawing.Size(112, 48);
             buttonSearch.TabIndex = 50;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = false;
@@ -330,10 +321,9 @@
             panel1.Controls.Add(numericUpDownPage);
             panel1.Controls.Add(comboBoxGenre);
             panel1.Controls.Add(dateTimePickerRecord);
-            panel1.Location = new System.Drawing.Point(890, 0);
-            panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            panel1.Location = new System.Drawing.Point(1017, 0);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(268, 587);
+            panel1.Size = new System.Drawing.Size(306, 783);
             panel1.TabIndex = 51;
             // 
             // buttonRefresh
@@ -343,10 +333,9 @@
             buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             buttonRefresh.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             buttonRefresh.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonRefresh.Location = new System.Drawing.Point(335, 528);
-            buttonRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            buttonRefresh.Location = new System.Drawing.Point(383, 704);
             buttonRefresh.Name = "buttonRefresh";
-            buttonRefresh.Size = new System.Drawing.Size(98, 36);
+            buttonRefresh.Size = new System.Drawing.Size(119, 48);
             buttonRefresh.TabIndex = 52;
             buttonRefresh.Text = "Refresh";
             buttonRefresh.UseMnemonic = false;
@@ -355,10 +344,10 @@
             // 
             // Form2
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
-            ClientSize = new System.Drawing.Size(1158, 575);
+            ClientSize = new System.Drawing.Size(1323, 767);
             Controls.Add(buttonRefresh);
             Controls.Add(panel1);
             Controls.Add(buttonUpdate);
@@ -369,7 +358,7 @@
             Controls.Add(buttonSearch);
             Controls.Add(button1);
             ForeColor = System.Drawing.Color.SandyBrown;
-            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             Name = "Form2";
             Text = "Books";
             FormClosing += Form2_FormClosing;
@@ -385,7 +374,6 @@
         #endregion
         private System.Windows.Forms.Label BOOKS;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -402,5 +390,6 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonRefresh;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

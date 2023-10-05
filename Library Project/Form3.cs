@@ -8,16 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Library_Project
 {
     public partial class Form3 : Form
     {
         BookLibraryContext db = new BookLibraryContext();
+        public static Form3 instance;
 
         public Form3()
         {
             InitializeComponent();
+            instance = this;
             dataGridView1.DataSource = new DataTable();
             dataGridView1.DataSource = db.Customers.ToList();
             dataGridView1.Columns[1].Width = 131;
@@ -151,49 +154,13 @@ namespace Library_Project
             numericUpDownAge.Minimum = 0;
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        public void buttonSearch_Click(object sender, EventArgs e)
         {
-            string searchValue1 = textBoxCustomerName.Text.ToLower();
-            string searchValue2 = textBoxSurname.Text.ToLower();
-            string searchValue3 = comboBoxGender.SelectedItem?.ToString().ToLower();
-            string searchValue4 = textBoxPhoneNo.Text.ToLower();
-            try
-            {
+            var newform = new SearchCustomer();
+            newform.Show();
 
-                var filteredCustomers = db.Customers.ToList();
-                if (!string.IsNullOrEmpty(searchValue1))
-                {
-                    filteredCustomers = filteredCustomers.Where(x => x.Name.ToLower().Contains(searchValue1)).ToList();
-
-                }
-
-                if (!string.IsNullOrEmpty(searchValue2))
-                {
-                    filteredCustomers = filteredCustomers.Where(x => x.Surname.ToLower().Contains(searchValue2)).ToList();
-
-                }
-
-                if (!string.IsNullOrEmpty(searchValue3))
-                {
-                    filteredCustomers = filteredCustomers.Where(x => x.Gender.ToLower().Contains(searchValue3)).ToList();
-                }
-
-                if (string.IsNullOrEmpty(searchValue1) && string.IsNullOrEmpty(searchValue2) && string.IsNullOrEmpty(searchValue3))
-                {
-                    if (!string.IsNullOrEmpty(searchValue4))
-                    {
-                        filteredCustomers = filteredCustomers.Where(x => x.CreateDate.ToShortDateString().Contains(searchValue4)).ToList();
-                    }
-
-                }
-
-                dataGridView1.DataSource = filteredCustomers;
-                SetDefaultCellsValue();
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+            
         }
+
     }
 }

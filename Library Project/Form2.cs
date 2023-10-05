@@ -20,9 +20,11 @@ namespace Library_Project
     public partial class Form2 : Form
     {
         BookLibraryContext db = new BookLibraryContext();
+        public static Form2 instance;
         public Form2()
         {
             InitializeComponent();
+            instance = this;
             dataGridView1.DataSource = db.Books.ToList();
             dataGridView1.Columns[1].Width = 131;
             dataGridView1.Columns[2].Width = 131;
@@ -102,7 +104,7 @@ namespace Library_Project
             MessageBox.Show("Deleted");
         }
 
-        private void SetDefaultCellsValue()
+        public void SetDefaultCellsValue()
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -146,47 +148,9 @@ namespace Library_Project
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            string searchValue1 = textBoxName.Text.ToLower();
-            string searchValue2 = textBoxWriter.Text.ToLower();
-            string searchValue3 = comboBoxGenre.SelectedItem?.ToString().ToLower();
-            string searchValue4 = dateTimePickerRecord.Value.ToShortDateString();
-            try
-            {
-
-                var filteredBooks = db.Books.ToList();
-                if (!string.IsNullOrEmpty(searchValue1))
-                {
-                    filteredBooks = filteredBooks.Where(x => x.Name.ToLower().Contains(searchValue1)).ToList();
-
-                }
-
-                if (!string.IsNullOrEmpty(searchValue2))
-                {
-                    filteredBooks = filteredBooks.Where(x => x.Writer.ToLower().Contains(searchValue2)).ToList();
-
-                }
-
-                if (!string.IsNullOrEmpty(searchValue3))
-                {
-                    filteredBooks = filteredBooks.Where(x => x.Genre.ToLower().Contains(searchValue3)).ToList();
-                }
-
-                if (string.IsNullOrEmpty(searchValue1) && string.IsNullOrEmpty(searchValue2) && string.IsNullOrEmpty(searchValue3))
-                {
-                    if (!string.IsNullOrEmpty(searchValue4))
-                    {
-                        filteredBooks = filteredBooks.Where(x => x.RecordDate.ToShortDateString().Contains(searchValue4)).ToList();
-                    }
-
-                }
-
-                dataGridView1.DataSource = filteredBooks;
-                SetDefaultCellsValue();
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+            var newform = new SearchBook();
+            newform.Show();
+           
         }
 
         private void numericUpDownPage_ValueChanged(object sender, EventArgs e)

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -15,10 +16,12 @@ namespace Library_Project
     public partial class Form4 : Form
     {
         BookLibraryContext db = new BookLibraryContext();
+        public static Form4 instance;
 
         public Form4()
         {
             InitializeComponent();
+            instance = this;
             LoadDatagrid();
             comboBox_Listele();
         }
@@ -95,7 +98,7 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
 
             var addReservation = new Reservation()
             {
@@ -122,15 +125,16 @@ namespace Library_Project
 
         private void comboBox_Listele()
         {
-            comboBox2.DataSource = db.Books.ToList();
+
+            comboBox2.DataSource = db.Books.OrderBy(x => x.Name).ToList();
             comboBox2.DisplayMember = "Name";
             comboBox2.ValueMember = "Id";
+            
 
-
-            comboBox1.DataSource = db.Customers.ToList();
+            comboBox1.DataSource = db.Customers.OrderBy(x => x.Name).ToList();
             comboBox2.DisplayMember = "Name" + "Surname";
             comboBox1.ValueMember = "Id";
-
+           
         }
 
         private void comboBox1_Format(object sender, ListControlConvertEventArgs e)
@@ -140,6 +144,15 @@ namespace Library_Project
             e.Value = firstname + " " + lastname;
         }
 
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            var newform = new SearchReservation();
+            newform.Show();
+        }
 
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
