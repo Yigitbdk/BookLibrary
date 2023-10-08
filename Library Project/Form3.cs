@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,7 +26,7 @@ namespace Library_Project
             dataGridView1.DataSource = db.Customers.ToList();
             dataGridView1.Columns[1].Width = 131;
             dataGridView1.Columns[2].Width = 131;
-            dataGridView1.Columns[3].Width = 220;
+            dataGridView1.Columns[3].Width = 91;
             dataGridView1.Columns["ID"].Visible = false;
         }
 
@@ -42,7 +43,16 @@ namespace Library_Project
         {
             Application.Exit();
         }
-
+        private void AddButtonColumnOnDataGridView()
+        {
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Rez.",
+                Width = 60,
+                Name = "buttonColumn"
+            };
+            dataGridView1.Columns.Insert(0, buttonColumn);
+        }
         private void AddCheckBoxColumnOnDataGridView()
         {
             DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
@@ -68,6 +78,7 @@ namespace Library_Project
         private void Form3_Load(object sender, EventArgs e)
         {
             AddCheckBoxColumnOnDataGridView();
+            AddButtonColumnOnDataGridView();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -85,6 +96,12 @@ namespace Library_Project
             db.SaveChanges();
             LoadDatagrid();
             SetDefaultCellsValue();
+
+            textBoxName.Text = "";
+            textBoxWriter.Text = "";
+            textBoxPhoneNo.Text = "";
+            comboBoxGender.Text = "";
+            numericUpDownAge.Value = 0;
         }
 
         private void SetDefaultCellsValue()
@@ -113,20 +130,22 @@ namespace Library_Project
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+
+            if (MessageBox.Show("Are you sure to delete this Record/s", "DataGridView", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
-                if (isSelected)
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    db.Customers.Remove((Customer)row.DataBoundItem);
+                    bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+                    if (isSelected)
+                    {
+                        db.Customers.Remove((Customer)row.DataBoundItem);
+                    }
                 }
             }
-
             db.SaveChanges();
             LoadDatagrid();
             SetDefaultCellsValue();
 
-            MessageBox.Show("Deleted");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -140,6 +159,13 @@ namespace Library_Project
             newDataRow.Cells[5].Value = comboBoxGender.Text;
             newDataRow.Cells[7].Value = textBoxPhoneNo.Text;
             db.SaveChanges();
+
+
+            textBoxName.Text = "";
+            textBoxWriter.Text = "";
+            textBoxPhoneNo.Text = "";
+            comboBoxGender.Text = "";
+            numericUpDownAge.Value = 0;
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -155,11 +181,18 @@ namespace Library_Project
         }
 
         public void buttonSearch_Click(object sender, EventArgs e)
-        {
-            var newform = new SearchCustomer();
-            newform.Show();
 
-            
+        {
+            if (textBoxName.Text != "" || textBoxWriter.Text != "" || textBoxPhoneNo.Text != "" || comboBoxGender.Text != "")
+            {
+                MessageBox.Show("You must leave the right side blank.");
+            }
+            else
+            {
+                var newform = new Form1();
+                newform.Show();
+                this.Hide();
+            }
         }
 
     }

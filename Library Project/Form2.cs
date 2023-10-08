@@ -52,11 +52,19 @@ namespace Library_Project
             dataGridView1.Columns.Insert(0, checkBoxColumn);
             SetDefaultCellsValue();
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            var newform = new Form1();
-            newform.Show();
-            this.Hide();
+            if (textBoxName.Text != "" || textBoxWriter.Text != "" || comboBoxGenre.Text != "")
+            {
+                MessageBox.Show("You must leave the right side blank.");
+            }
+            else
+            {
+                var newform = new Form1();
+                newform.Show();
+                this.Hide();
+            }
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
@@ -84,24 +92,32 @@ namespace Library_Project
             db.SaveChanges();
             LoadDatagrid();
             SetDefaultCellsValue();
+
+            textBoxName.Text = "";
+            textBoxWriter.Text = "";
+            comboBoxGenre.Text = "";
+            numericUpDownPage.Value = 0;
+            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            if(MessageBox.Show("Are you sure to delete this Record/s","DataGridView",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
-                if (isSelected)
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    db.Books.Remove((Book)row.DataBoundItem);
+                    bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+                    if (isSelected)
+                    {
+                        db.Books.Remove((Book)row.DataBoundItem);
+                    }
                 }
             }
 
             db.SaveChanges();
             LoadDatagrid();
             SetDefaultCellsValue();
-
-            MessageBox.Show("Deleted");
         }
 
         public void SetDefaultCellsValue()
@@ -129,6 +145,11 @@ namespace Library_Project
             newDataRow.Cells[5].Value = numericUpDownPage.Text;
             newDataRow.Cells[6].Value = dateTimePickerRecord.Text;
             db.SaveChanges();
+
+            textBoxName.Text = "";
+            textBoxWriter.Text = "";
+            comboBoxGenre.Text = "";
+            numericUpDownPage.Value = 0;
 
         }
 
