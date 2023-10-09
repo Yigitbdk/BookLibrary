@@ -104,27 +104,12 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure to delete this Record/s","DataGridView",MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-                    bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
-                    if (isSelected)
-                    {
-                        db.Books.Remove((Book)row.DataBoundItem);
-                    }
-                }
-            }
-            //var reservedBook = db.Reservations.Include(x => x.Book);
-            //var listedBook = db.Books.Include(x => x.Name);
-            //var reservedBook = Form4.instance.dataGridView1.Rows.ToString();
+         
             new Form4();
-            //foreach (DataGridViewRow row in dataGridView1.Rows)
-            //{
-
-            //}
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+           
+            if (MessageBox.Show("Are you sure to delete this Record/s", "DataGridView", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            { 
+                foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
 
@@ -146,8 +131,8 @@ namespace Library_Project
             db.SaveChanges();
             LoadDatagrid();
             SetDefaultCellsValue();
+            }
         }
-
         public void SetDefaultCellsValue()
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
