@@ -1,5 +1,6 @@
 ﻿using Library_Project.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections;
@@ -88,12 +89,31 @@ namespace Library_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //var reservedBook = db.Reservations.Include(x => x.Book);
+            //var listedBook = db.Books.Include(x => x.Name);
+            //var reservedBook = Form4.instance.dataGridView1.Rows.ToString();
+            new Form4();
+            //foreach (DataGridViewRow row in dataGridView1.Rows)
+            //{
+
+            //}
+
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+
                 if (isSelected)
                 {
+                    foreach (DataGridViewRow row2 in Form4.instance.dataGridView1.Rows)
+                    {
+                        if (row.Cells["Name"].Value.ToString() == row2.Cells["BookName"].Value.ToString())
+                        {
+                            MessageBox.Show("This book is already reserved! Please check the reservation status!");
+                            return;
+                        }
+                    }
                     db.Books.Remove((Book)row.DataBoundItem);
+                    MessageBox.Show("Deleted");
                 }
             }
 
@@ -101,7 +121,7 @@ namespace Library_Project
             LoadDatagrid();
             SetDefaultCellsValue();
 
-            MessageBox.Show("Deleted");
+            
         }
 
         public void SetDefaultCellsValue()

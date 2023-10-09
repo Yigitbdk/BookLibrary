@@ -42,8 +42,7 @@
             dataGridView1 = new System.Windows.Forms.DataGridView();
             buttonSearch = new System.Windows.Forms.Button();
             buttonRefresh = new System.Windows.Forms.Button();
-            button3 = new System.Windows.Forms.Button();
-            buttonUpdate = new System.Windows.Forms.Button();
+            buttonDelete = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -156,7 +155,7 @@
             button2.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button2.Location = new System.Drawing.Point(648, 705);
+            button2.Location = new System.Drawing.Point(683, 708);
             button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(112, 48);
@@ -194,8 +193,6 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(42, 46, 52);
             dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -203,7 +200,6 @@
             dataGridView1.Location = new System.Drawing.Point(27, 175);
             dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new System.Drawing.Size(986, 496);
@@ -241,32 +237,20 @@
             buttonRefresh.UseVisualStyleBackColor = false;
             buttonRefresh.Click += buttonRefresh_Click;
             // 
-            // button3
+            // buttonDelete
             // 
-            button3.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button3.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            button3.Location = new System.Drawing.Point(777, 705);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(112, 48);
-            button3.TabIndex = 54;
-            button3.Text = "Delete";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // buttonUpdate
-            // 
-            buttonUpdate.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
-            buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            buttonUpdate.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            buttonUpdate.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
-            buttonUpdate.Location = new System.Drawing.Point(901, 705);
-            buttonUpdate.Name = "buttonUpdate";
-            buttonUpdate.Size = new System.Drawing.Size(112, 48);
-            buttonUpdate.TabIndex = 55;
-            buttonUpdate.Text = "Update";
-            buttonUpdate.UseVisualStyleBackColor = false;
+            buttonDelete.BackColor = System.Drawing.Color.FromArgb(42, 46, 52);
+            buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonDelete.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonDelete.ForeColor = System.Drawing.Color.FromArgb(245, 179, 1);
+            buttonDelete.Location = new System.Drawing.Point(833, 708);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new System.Drawing.Size(112, 48);
+            buttonDelete.TabIndex = 54;
+            buttonDelete.Text = "Delete";
+            buttonDelete.UseVisualStyleBackColor = false;
+            buttonDelete.Click += buttonDelete_Click;
             // 
             // panel1
             // 
@@ -289,10 +273,9 @@
             BackColor = System.Drawing.Color.FromArgb(30, 35, 40);
             ClientSize = new System.Drawing.Size(1326, 769);
             Controls.Add(panel1);
-            Controls.Add(buttonUpdate);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
-            Controls.Add(button3);
+            Controls.Add(buttonDelete);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(comboBox2);
@@ -306,6 +289,7 @@
             Text = "Reservation";
             FormClosing += Form4_FormClosing;
             Load += Form4_Load;
+            Shown += Form4_Shown;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -329,8 +313,7 @@
         private System.Windows.Forms.Button buttonSearch;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonRefresh;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Panel panel1;
     }
 }
