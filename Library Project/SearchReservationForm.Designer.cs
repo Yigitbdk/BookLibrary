@@ -1,6 +1,6 @@
 ﻿namespace Library_Project
 {
-    partial class SearchReservation
+    partial class SearchReservationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@
             buttonSearch.TabIndex = 52;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = false;
-            buttonSearch.Click += buttonSearch_Click;
+            buttonSearch.Click += BtnSearch_Click;
             // 
             // label1
             // 
@@ -77,6 +77,7 @@
             dateTimePickerTo.Name = "dateTimePickerTo";
             dateTimePickerTo.Size = new System.Drawing.Size(262, 34);
             dateTimePickerTo.TabIndex = 57;
+            dateTimePickerTo.ValueChanged += dateTimePickerTo_ValueChanged;
             // 
             // labelRecord
             // 
@@ -101,7 +102,8 @@
             dateTimePickerFrom.Name = "dateTimePickerFrom";
             dateTimePickerFrom.Size = new System.Drawing.Size(262, 34);
             dateTimePickerFrom.TabIndex = 55;
-            dateTimePickerFrom.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            dateTimePickerFrom.Value = new System.DateTime(2023, 10, 1, 0, 0, 0, 0);
+            dateTimePickerFrom.ValueChanged += dateTimePickerFrom_ValueChanged;
             // 
             // label2
             // 

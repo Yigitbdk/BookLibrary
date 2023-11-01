@@ -2,7 +2,7 @@
 
 namespace Library_Project
 {
-    partial class SearchCustomer
+    partial class SearchCustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -94,7 +94,7 @@ namespace Library_Project
             buttonSearch.TabIndex = 71;
             buttonSearch.Text = "Search";
             buttonSearch.UseVisualStyleBackColor = false;
-            buttonSearch.Click += buttonSearch_Click;
+            buttonSearch.Click += BtnSearch_Click;
             // 
             // SearchCustomer
             // 

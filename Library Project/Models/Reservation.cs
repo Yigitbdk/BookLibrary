@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Library_Project.Models;
 
@@ -11,21 +12,25 @@ public partial class Reservation
 
     public int CustomerId { get; set; }
 
-    public DateTime DateTake { get; set; }
+    public DateTime BorrowDate { get; set; }
 
-    public DateTime DateReturn { get; set; }
+    public DateTime BorrowEndDate { get; set; }
+
+    public DateTime? ReturnDate { get; set; }
 
     public virtual Book Book { get; set; }
 
     public virtual Customer Customer { get; set; }
 
+
     public string BookName
     {
         get
         {
-            return Book.Name;
+            return Book?.Name;
         }
     }
+
     public string CustomerFullName
     {
         get

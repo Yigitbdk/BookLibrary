@@ -19,5 +19,11 @@ public partial class Customer
 
     public string TelNo { get; set; }
 
-   // public virtual ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
+    public string CustomerFullName
+    {
+        get
+        {
+            return $"{Name} {Surname}";
+        }
+    }
 }

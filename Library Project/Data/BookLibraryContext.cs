@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Library_Project.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Library_Project.Models;
+namespace Library_Project.Data;
 
 public partial class BookLibraryContext : DbContext
 {
@@ -84,8 +85,8 @@ public partial class BookLibraryContext : DbContext
             entity.HasKey(e => e.Id).HasName("PK_RESERVATIONS");
 
             entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.DateReturn).HasColumnType("date");
-            entity.Property(e => e.DateTake).HasColumnType("date");
+            entity.Property(e => e.BorrowEndDate).HasColumnType("date");
+            entity.Property(e => e.BorrowDate).HasColumnType("date");
 
         });
 

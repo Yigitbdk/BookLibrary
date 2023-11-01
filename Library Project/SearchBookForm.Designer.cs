@@ -1,6 +1,6 @@
 ﻿namespace Library_Project
 {
-    partial class SearchBook
+    partial class SearchBookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -132,6 +132,7 @@
             dateTimePickerFrom.Size = new System.Drawing.Size(262, 34);
             dateTimePickerFrom.TabIndex = 46;
             dateTimePickerFrom.Value = new System.DateTime(2023, 9, 1, 0, 0, 0, 0);
+            dateTimePickerFrom.ValueChanged += dateTimePickerFrom_ValueChanged;
             // 
             // buttonSearch
             // 
@@ -171,6 +172,7 @@
             dateTimePickerTo.Name = "dateTimePickerTo";
             dateTimePickerTo.Size = new System.Drawing.Size(262, 34);
             dateTimePickerTo.TabIndex = 53;
+            dateTimePickerTo.ValueChanged += dateTimePickerTo_ValueChanged;
             // 
             // SearchBook
             // 
@@ -205,8 +207,8 @@
         private System.Windows.Forms.TextBox textBoxWriter;
         private System.Windows.Forms.ComboBox comboBoxGenre;
         private System.Windows.Forms.DateTimePicker dateTimePickerFrom;
-        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerTo;
+        public System.Windows.Forms.Button buttonSearch;
     }
 }
