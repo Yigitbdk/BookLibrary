@@ -1,0 +1,163 @@
+﻿USE [BookLibrary]
+GO
+/****** Object:  Table [dbo].[Books]    Script Date: 11.12.2023 10:03:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Books](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Writer] [varchar](50) NOT NULL,
+	[Genre] [varchar](50) NOT NULL,
+	[PageNumber] [varchar](50) NOT NULL,
+	[RecordDate] [date] NOT NULL,
+	[CreateDate] [date] NOT NULL,
+ CONSTRAINT [PK_Books] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Customers]    Script Date: 11.12.2023 10:03:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customers](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[BookId] [int] NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Surname] [varchar](50) NOT NULL,
+	[Age] [smallint] NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
+	[CreateDate] [date] NOT NULL,
+	[TelNo] [varchar](15) NULL,
+ CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Genre]    Script Date: 11.12.2023 10:03:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Genre](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Genre] [varchar](50) NOT NULL,
+	[Date] [date] NOT NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Reservations]    Script Date: 11.12.2023 10:03:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Reservations](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[BookId] [int] NOT NULL,
+	[CustomerId] [int] NOT NULL,
+	[BorrowDate] [date] NOT NULL,
+	[BorrowEndDate] [date] NOT NULL,
+	[ReturnDate] [date] NULL,
+ CONSTRAINT [PK_Reservations] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Books] ON 
+
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (2002, N'Ay''a Yolculuk', N'Jules Verne', N'Science Fiction', N'100', CAST(N'2023-09-18' AS Date), CAST(N'2023-09-18' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (2003, N'1984', N'George Orwell', N'Science Fiction', N'100', CAST(N'2023-09-18' AS Date), CAST(N'2023-09-18' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (5002, N'Animal Farm', N'George Orwell', N'Novel', N'140', CAST(N'2023-10-03' AS Date), CAST(N'2023-10-03' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (5003, N'For Whom the Bell Tolls', N'Ernest Hemingway', N'Novel', N'624', CAST(N'2023-10-03' AS Date), CAST(N'2023-10-03' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (9003, N'qwerty', N'sad', N'True Crime', N'789', CAST(N'2023-10-06' AS Date), CAST(N'2023-10-06' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (12004, N'zdasdasdz', N'asdasdasdz', N'Action and Adventure', N'222', CAST(N'2023-10-10' AS Date), CAST(N'2023-10-10' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (12005, N'qweqweq', N'gfgfgh', N'Novel', N'456', CAST(N'2023-10-10' AS Date), CAST(N'2023-10-10' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (13002, N'cvbbcbc', N'cvbvbbcb', N'True Crime', N'325', CAST(N'2023-10-10' AS Date), CAST(N'2023-10-10' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (13003, N'ghfghfgh', N'mjmjghg', N'Essays', N'789', CAST(N'2023-10-10' AS Date), CAST(N'2023-10-10' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (14003, N'KLJKLJ', N'klskls', N'Cookbooks', N'123', CAST(N'2023-10-17' AS Date), CAST(N'2023-10-16' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (15002, N'The Call of the Wild', N'Jack London', N'Novel', N'175', CAST(N'2023-10-18' AS Date), CAST(N'2023-10-18' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (15003, N'Dune', N'Frank Herbert', N'Science Fiction', N'712', CAST(N'2023-10-18' AS Date), CAST(N'2023-10-18' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (16004, N'bnmbnm', N'mönmnm', N'True Crime', N'456', CAST(N'2023-10-18' AS Date), CAST(N'2023-10-18' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (19007, N'vvnmvm', N'mnnm', N'Biographies and Autobiographies', N'478', CAST(N'2023-10-24' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (19008, N'asdad', N'asdasd', N'Cookbooks', N'4756', CAST(N'2023-10-24' AS Date), CAST(N'2023-10-25' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (19009, N'brave new world', N'aldous huxley', N'Horror', N'477', CAST(N'2023-10-24' AS Date), CAST(N'2023-10-25' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (20012, N'fgsdfsdfsd', N'dfdfdg', N'Action and Adventure', N'2658', CAST(N'2023-10-25' AS Date), CAST(N'2023-10-25' AS Date))
+INSERT [dbo].[Books] ([ID], [Name], [Writer], [Genre], [PageNumber], [RecordDate], [CreateDate]) VALUES (24009, N'Treasure Island', N'Robeert Louis Stevenson', N'Novel', N'238', CAST(N'2023-10-27' AS Date), CAST(N'2023-10-27' AS Date))
+SET IDENTITY_INSERT [dbo].[Books] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Customers] ON 
+
+INSERT [dbo].[Customers] ([ID], [BookId], [Name], [Surname], [Age], [Gender], [CreateDate], [TelNo]) VALUES (2, NULL, N'Nihat', N'Kahraman', 26, N'Male', CAST(N'2023-09-26' AS Date), N'5551234567')
+INSERT [dbo].[Customers] ([ID], [BookId], [Name], [Surname], [Age], [Gender], [CreateDate], [TelNo]) VALUES (7002, NULL, N'Ebru', N'Yildirim', 25, N'Female', CAST(N'2023-10-09' AS Date), N'5554561234')
+INSERT [dbo].[Customers] ([ID], [BookId], [Name], [Surname], [Age], [Gender], [CreateDate], [TelNo]) VALUES (8002, NULL, N'Fatih', N'Kahraman', 24, N'Male', CAST(N'2023-10-18' AS Date), N'5554561234')
+INSERT [dbo].[Customers] ([ID], [BookId], [Name], [Surname], [Age], [Gender], [CreateDate], [TelNo]) VALUES (8003, NULL, N'Yigit', N'Badik', 23, N'Male', CAST(N'2023-10-23' AS Date), N'5551234568')
+INSERT [dbo].[Customers] ([ID], [BookId], [Name], [Surname], [Age], [Gender], [CreateDate], [TelNo]) VALUES (11003, NULL, N'Mert', N'Kahraman', 27, N'Male', CAST(N'2023-10-27' AS Date), N'555789456')
+SET IDENTITY_INSERT [dbo].[Customers] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Reservations] ON 
+
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (1, 2002, 0, CAST(N'2023-09-22' AS Date), CAST(N'2023-09-27' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (2, 1002, 0, CAST(N'2023-09-22' AS Date), CAST(N'2023-09-28' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (1002, 2003, 0, CAST(N'2023-09-25' AS Date), CAST(N'2023-09-25' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (1003, 1002, 0, CAST(N'2023-09-25' AS Date), CAST(N'2023-09-25' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (2002, 2003, 0, CAST(N'2023-09-26' AS Date), CAST(N'2023-09-22' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (3002, 3004, 0, CAST(N'2023-09-26' AS Date), CAST(N'2023-09-26' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (3003, 2002, 0, CAST(N'2023-09-26' AS Date), CAST(N'2023-09-26' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (6002, 2004, 2, CAST(N'2023-09-26' AS Date), CAST(N'2023-09-26' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (8002, 2003, 2, CAST(N'2023-09-26' AS Date), CAST(N'2023-09-26' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (9002, 3004, 2, CAST(N'2023-09-13' AS Date), CAST(N'2023-09-29' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (10002, 2002, 2, CAST(N'2023-09-27' AS Date), CAST(N'2023-09-27' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (11002, 2003, 2, CAST(N'2023-09-28' AS Date), CAST(N'2023-09-28' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (11003, 2004, 2, CAST(N'2023-09-28' AS Date), CAST(N'2023-09-28' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (11005, 2002, 2, CAST(N'2023-09-28' AS Date), CAST(N'2023-10-11' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (12003, 2003, 2, CAST(N'2023-09-28' AS Date), CAST(N'2023-09-28' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (14002, 2002, 2, CAST(N'2023-10-03' AS Date), CAST(N'2023-10-03' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (14004, 5003, 2, CAST(N'2023-10-03' AS Date), CAST(N'2023-10-03' AS Date), CAST(N'2023-10-25' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (14005, 5002, 2, CAST(N'2023-10-03' AS Date), CAST(N'2023-10-03' AS Date), CAST(N'2023-10-25' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (16002, 5002, 2, CAST(N'2023-10-04' AS Date), CAST(N'2023-10-04' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (17002, 5003, 2, CAST(N'2023-10-05' AS Date), CAST(N'2023-10-05' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (18002, 2002, 2, CAST(N'2023-10-05' AS Date), CAST(N'2023-10-05' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (18003, 5002, 2, CAST(N'2023-10-05' AS Date), CAST(N'2023-10-05' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (19002, 1002, 2, CAST(N'2023-10-05' AS Date), CAST(N'2023-10-05' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (19003, 6002, 2, CAST(N'2023-10-05' AS Date), CAST(N'2023-10-05' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (20002, 7002, 2, CAST(N'2023-10-05' AS Date), CAST(N'2023-10-05' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (20003, 7003, 2, CAST(N'2023-10-05' AS Date), CAST(N'2023-10-05' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (21002, 2003, 2, CAST(N'2023-10-06' AS Date), CAST(N'2023-10-06' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (24019, 2003, 4004, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (25002, 2003, 5002, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (25003, 2003, 5003, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (25004, 2003, 5004, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (26002, 2003, 6002, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (26003, 2003, 7002, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (26005, 2002, 7002, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (32005, 1984, 7002, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (33002, 2003, 7002, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (33003, 2002, 7002, CAST(N'2023-10-09' AS Date), CAST(N'2023-10-09' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (35002, 2003, 7002, CAST(N'2023-10-10' AS Date), CAST(N'2023-10-10' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (36002, 13002, 7002, CAST(N'2023-10-20' AS Date), CAST(N'2023-10-12' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (37002, 15002, 2, CAST(N'2023-10-17' AS Date), CAST(N'2023-10-29' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (37003, 5003, 7002, CAST(N'2023-10-17' AS Date), CAST(N'2023-10-29' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (37004, 2003, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-18' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (37005, 5003, 8002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-23' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (38005, 5002, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-24' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (38007, 5002, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-24' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (38014, 12004, 2, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-24' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (38016, 5002, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-24' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (38021, 5003, 2, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-24' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (39005, 5002, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-25' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (39007, 2002, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-25' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (39008, 2003, 2, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-25' AS Date), CAST(N'0001-01-01' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (39009, 5002, 2, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-25' AS Date), CAST(N'2023-10-30' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (40005, 5002, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-25' AS Date), CAST(N'2023-10-30' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (40008, 15003, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-25' AS Date), CAST(N'2023-10-30' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (43009, 24009, 8002, CAST(N'2023-10-18' AS Date), CAST(N'2023-11-17' AS Date), CAST(N'2023-10-24' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (43011, 12005, 8002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-31' AS Date), CAST(N'2023-10-20' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (43012, 13003, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-31' AS Date), CAST(N'2023-11-02' AS Date))
+INSERT [dbo].[Reservations] ([ID], [BookId], [CustomerId], [BorrowDate], [BorrowEndDate], [ReturnDate]) VALUES (43016, 19007, 7002, CAST(N'2023-10-01' AS Date), CAST(N'2023-10-31' AS Date), CAST(N'2023-10-31' AS Date))
+SET IDENTITY_INSERT [dbo].[Reservations] OFF
+GO
